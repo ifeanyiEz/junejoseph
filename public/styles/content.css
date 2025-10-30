@@ -39,7 +39,6 @@
 
 .button-blue {
     font-size: 1rem;
-    max-width: 10rem;
     padding: 0.3rem 2rem;
     text-align: center;
     border: 1px solid #0545a5;
@@ -49,12 +48,15 @@
 
 .button-green {
     font-size: 1rem;
-    max-width: 10rem;
     padding: 0.3rem 2rem;
     text-align: center;
     border: 1px solid #00a500;
     border-radius: 1rem;
     background-color: transparent;
+}
+
+.nav-button-size {
+    max-width: 10rem;
 }
 
 .nav-item .button-green {
@@ -79,7 +81,7 @@
 }
 
 .black-text {
-    color: #222222 !important;
+    color: #010101 !important;
 }
 
 .orange-text {
@@ -243,10 +245,24 @@
     background-color: #0fb80f !important;
 }
 
-.footer-grid {
+.footer-row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-grid {
+    max-width: fit-content;
+    line-height: 1.2rem !important;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: auto auto auto;
     grid-template-rows: auto;
 }
 
@@ -261,6 +277,10 @@
 
 .footer-justify {
     justify-content: end;
+}
+
+.footer-justify2 {
+    justify-content: left;
 }
 
 ul .nav-item {
