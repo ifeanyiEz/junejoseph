@@ -8,6 +8,10 @@
     border-bottom: 1px solid #008000;
 }
 
+.border-top {
+    border-top: 1px solid #008000 !important;
+}
+
 .logo-area {
     width: 17rem;
     height: 4rem;
@@ -106,6 +110,129 @@
     font-weight: 900 !important;
 }
 
+.my-py-4 {
+    padding-top: 1rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.xtiny-bm {
+    margin-bottom: 0.25rem !important;
+}
+
+.vtiny-bm {
+    margin-bottom: 0.75rem !important;
+}
+
+.tiny-bm {
+    margin-bottom: 1.25rem !important;
+}
+
+.large-bm {
+    margin-bottom: 1.75rem !important;
+}
+
+.vlarge-bm {
+    margin-bottom: 2.25rem !important;
+}
+
+.xlarge-bm {
+    margin-bottom: 3rem !important;
+}
+
+.no-bm {
+    margin: 0 !important;
+}
+
+.xtiny-tbm {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.vtiny-tbm {
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.large-tbm {
+    margin-top: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+.tiny-tbm {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.vlarge-tbm {
+    margin-top: 2.25rem !important;
+    margin-bottom: 2.25rem !important;
+}
+
+.xtiny-tm {
+    margin-top: 0.25rem !important;
+}
+
+.vtiny-tm {
+    margin-top: 0.75rem !important;
+}
+
+.large-tm {
+    margin-top: 1.25rem !important;
+}
+
+.tiny-tm {
+    margin-top: 1rem !important;
+}
+
+.vlarge-tm {
+    margin-top: 2.25rem !important;
+}
+
+.xtiny-sm {
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+}
+
+.thin-text {
+    font-weight: 200 !important;
+}
+
+.regular-text {
+    font-weight: 300;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.small-text {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
+.smaller-text {
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+}
+
+.vsmall-text {
+    font-size: 0.65rem;
+}
+
+.xsmall-text {
+    font-size: 0.55rem;
+}
+
 .bg-dark {
     --bs-bg-opacity: 1;
     background-color: #008000 !important;
@@ -114,4 +241,32 @@
 .bg-light {
     --bs-bg-opacity: 1;
     background-color: #0fb80f !important;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
+.footer-info {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+    margin: 0.5rem 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-justify {
+    justify-content: end;
+}
+
+ul .nav-item {
+    list-style: none;
+}
+
+.copyright {
+    margin: 0 auto;
 }
