@@ -36,8 +36,6 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
-    /* Height of the footer */
 }
 
 @media (max-width: 576px) {
@@ -65,9 +63,25 @@ html, body {
     }
 
     .nav-item .nav-link {
-        font-size: 1.3rem;
-        margin: 0.5rem 0.3rem;
+        font-size: 1.2rem;
+        margin: 0.3rem 0.3rem;
     }
+
+    .footer-grid {
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .footer-info {
+        margin: 0.2rem 0 0 0;
+    }
+
+    .footer-justify,
+    .footer-justify2 {
+        justify-content: center;
+    }
+    
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -94,8 +108,24 @@ html, body {
     }
 
     .nav-item .nav-link {
-        font-size: 1.3rem;
-        margin: 0.5rem 0.3rem;
+        font-size: 1.1rem;
+        margin: 0.3rem 0.3rem;
+    }
+
+    .footer-grid {
+        line-height: 1rem !important;
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .footer-info {
+        margin: 0.2rem 0 0 0;
+    }
+
+    .footer-justify,
+    .footer-justify2 {
+        justify-content: center;
     }
 }
 
@@ -123,8 +153,20 @@ html, body {
     }
 
     .nav-item .nav-link {
-        font-size: 1.3rem;
-        margin: 0.5rem 0.3rem;
+        font-size: 1.15rem;
+        margin: 0.3rem 0.3rem;
+    }
+
+    .footer-grid {
+        line-height: 1rem !important;
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .footer-justify,
+    .footer-justify2 {
+        justify-content: center;
     }
 }
 
@@ -142,6 +184,17 @@ html, body {
     body {
         font-size: 13.5px;
     }
+
+    .footer-grid {
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .footer-justify,
+    .footer-justify2 {
+        justify-content: center;
+    }
 }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
@@ -157,6 +210,17 @@ html, body {
     html,
     body {
         font-size: 14px;
+    }
+
+    .footer-grid {
+        gap: 0;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .footer-justify,
+    .footer-justify2 {
+        justify-content: center;
     }
 }
 
