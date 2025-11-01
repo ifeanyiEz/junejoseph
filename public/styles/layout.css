@@ -72,7 +72,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 17.5rem;
+        padding-bottom: 3.8rem;
     }
 
     .navbar-nav {
@@ -89,18 +89,26 @@ html, body {
     }
 
     #blog-welcome {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr 2fr;
+    }
+
+    .welcome-msg {
+        padding: 1.5rem;
     }
 
     .home-title {
-        font-size: 3.45rem;
+        font-size: 4rem;
         line-height: 1.1;
     }
 
     .sub-title {
-        font-size: 1.29rem;
-        font-weight: 500 !important;
+        font-size: 2.5rem;
+        font-weight: 400 !important;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
     }
 
     .grid-cover {
@@ -108,21 +116,12 @@ html, body {
     }
 
     .footer-grid {
-        gap: 0;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        display: none;
     }
 
     .footer-justify,
     .footer-justify2 {
         justify-content: center;
-    }
-
-    .footer-info {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        margin: 0.2rem 0 0 0;
     }
     
 }
@@ -301,6 +300,10 @@ html, body {
         font-size: 2.25rem;
     }
 
+    .hero-button {
+        font-size: 1.2rem;
+    }
+
     .grid-cover {
         display: none;
     }
@@ -345,6 +348,10 @@ html, body {
         font-size: 1.5rem;
     }
 
+    .hero-button {
+        display: none;
+    }
+
     .footer-grid {
         gap: 0;
         grid-template-columns: auto;
@@ -383,6 +390,10 @@ html, body {
 
     .sub-title {
         font-size: 1.8rem;
+    }
+
+    .hero-button {
+        display: none;
     }
 
     .footer-grid {
@@ -424,6 +435,10 @@ html, body {
     .sub-title {
         font-size: 2rem;
     }
+
+    .hero-button {
+        display: none;
+    }
 }
 
 @media (min-width: 1921px) and (max-width: 2200px) {
@@ -453,6 +468,10 @@ html, body {
     #body {
         padding-bottom: 7.2rem;
     }
+
+    .hero-button {
+        display: none;
+    }
 }
 
 @media (min-width: 2201px) {
@@ -472,5 +491,9 @@ html, body {
 
     #body {
         padding-bottom: 7.2rem;
+    }
+
+    .hero-button {
+        display: none;
     }
 }
