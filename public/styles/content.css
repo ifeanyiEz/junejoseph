@@ -70,6 +70,8 @@
 
 .welcome-msg {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
 }
@@ -79,7 +81,7 @@
 }
 
 .sub-title {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .grid-cover {
