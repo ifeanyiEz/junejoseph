@@ -13,11 +13,12 @@
 }
 
 .logo-area {
-    width: 17rem;
-    height: 4rem;
+    width: 12rem;
+    height: 3rem;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
+    margin-top: 1rem;
 }
 
 .my-navbar-logo {
@@ -61,7 +62,7 @@
 
 .nav-item .button-green {
     margin-top: 0.15rem;
-    padding: 0.3rem 1.5rem !important;
+    padding: 0.3rem 1rem !important;
 }
 
 .nav-item .nav-link {
@@ -92,7 +93,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     background-image: url("/images/herbs.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: right center;
 }
