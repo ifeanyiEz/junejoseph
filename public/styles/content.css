@@ -90,7 +90,7 @@
     max-width: 40rem;
     margin: 2rem 0 1rem 0;
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
 }
@@ -162,7 +162,7 @@
 }
 
 .shd-text-black {
-    text-shadow: 1px 1px 3px #000000;
+    text-shadow: 1px 1px 0.5px #000000;
 }
 
 .bold-text {
