@@ -552,6 +552,10 @@ html, body {
         padding-bottom: 7.2rem;
     }
 
+    .home-title {
+        display: none;
+    }
+
     .hero-button {
         display: none;
     }
