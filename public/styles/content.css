@@ -345,6 +345,15 @@
     align-items: center;
 }
 
+.footer-info2 {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.3rem 1rem;
+    margin: 0.5rem 0;
+    flex-direction: row;
+    align-items: center;
+}
+
 .footer-justify {
     justify-content: end;
 }
