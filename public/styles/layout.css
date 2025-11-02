@@ -55,6 +55,11 @@ html, body {
     width: 100%;
 }
 
+.footer-row .my-py-4 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
 @media (max-width: 576px) {
     .container,
     .container-fluid,
@@ -103,6 +108,10 @@ html, body {
         line-height: 1.1;
     }
 
+    .home-title-lg {
+        display: none;
+    }
+
     .sub-title {
         font-size: 1.8rem;
         font-weight: 400 !important;
@@ -119,18 +128,8 @@ html, body {
         display: none;
     }
 
-    .footer-row .my-py-4 {
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
-    }
-
     .footer-grid {
         display: none;
-    }
-
-    .footer-justify,
-    .footer-justify2 {
-        justify-content: center;
     }
     
 }
@@ -151,7 +150,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 16.5rem;
+        padding-bottom: 1.8rem;
     }
 
     .navbar-nav {
@@ -169,18 +168,38 @@ html, body {
     }
 
     #blog-welcome {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
     }
 
-    .home-title {
-        font-size: 3.85rem;
+    .welcome-msg {
+        margin-top: 4.55rem;
+        padding: 1.1rem;
+    }
+
+    .home-title-lg {
+        font-size: 3.5rem;
         line-height: 1.1;
     }
 
+    .home-title {
+        display: none;
+    }
+
     .sub-title {
-        font-size: 1.45rem;
-        font-weight: 500 !important;
+        font-size: 1.8rem;
+        font-weight: 400 !important;
+    }
+
+    .hero-button {
+        gap: 2rem;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 1rem;
+        margin-top: 0;
+        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -188,22 +207,7 @@ html, body {
     }
 
     .footer-grid {
-        line-height: 1rem !important;
-        gap: 0;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
-
-    .footer-justify,
-    .footer-justify2 {
-        justify-content: center;
-    }
-
-    .footer-info {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        margin: 0.2rem 0 0 0;
+        display: none;
     }
 
 }
@@ -224,7 +228,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 12.5rem;
+        padding-bottom: 1.8rem;
     }
 
     .navbar-nav {
@@ -245,18 +249,37 @@ html, body {
     }
 
     #blog-welcome {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
+    }
+
+    .welcome-msg {
+        margin-top: 4.55rem;
     }
 
     .home-title {
-        font-size: 4.5rem;
+        display: none;
+    }
+
+    .home-title-lg {
+        font-size: 3.6rem;
         line-height: 1.1;
     }
 
     .sub-title {
-        font-size: 1.65rem;
-        font-weight: 400 !important;
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+    .hero-button {
+        gap: 2rem;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
+        margin-top: 0;
+        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -264,15 +287,7 @@ html, body {
     }
 
     .footer-grid {
-        line-height: 1rem !important;
-        gap: 0;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
-    }
-
-    .footer-justify,
-    .footer-justify2 {
-        justify-content: center;
+        display: none;
     }
 }
 
@@ -292,25 +307,41 @@ html, body {
     }
 
     #body {
-        padding-bottom: 11.5rem;
+        padding-bottom: 1.8rem;
     }
 
     #blog-welcome {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 1fr;
+    }
+
+    .welcome-msg {
+        margin-top: 4.55rem;
     }
 
     .home-title {
-        font-size: 6rem;
+       display: none;
+    }
+
+    .home-title-lg {
+        font-size: 4.5rem;
         line-height: 1.1;
     }
 
     .sub-title {
         font-size: 2.25rem;
+        font-weight: 400;
     }
 
     .hero-button {
-        font-size: 1.2rem;
+        gap: 2rem;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
+        margin-top: 0;
+        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -318,18 +349,12 @@ html, body {
     }
 
     .footer-grid {
-        gap: 0;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        display: none;
     }
 
-    .footer-justify,
-    .footer-justify2 {
-        justify-content: center;
-    }
 }
 
-@media (min-width: 1201px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1440px) {
     .container,
     .container-lg,
     .container-md,
@@ -348,13 +373,26 @@ html, body {
         padding-bottom: 11.5rem;
     }
 
+    #blog-welcome {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+
     .home-title {
-        font-size: 4.5rem;
+        display: none;
+    }
+
+    .home-title-lg {
+        font-size: 5rem;
         line-height: 1.1;
     }
 
+    .grid-cover {
+        display: none;
+    }
+
     .sub-title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 
     .hero-button {
@@ -373,7 +411,7 @@ html, body {
     }
 }
 
-@media (min-width: 1401px) and (max-width: 1680px) {
+@media (min-width: 1441px) and (max-width: 1680px) {
     .container,
     .container-lg,
     .container-md,
@@ -393,12 +431,16 @@ html, body {
     }
 
     .home-title {
-        font-size: 5rem;
+        display: none;
+    }
+
+    .home-title-lg {
+        font-size: 4.8rem;
         line-height: 1.1;
     }
 
     .sub-title {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
 
     .hero-button {
@@ -437,12 +479,16 @@ html, body {
     }
 
     .home-title {
+        display: none;
+    }
+
+    .home-title-lg {
         font-size: 5.5rem;
         line-height: 1.1;
     }
 
     .sub-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .hero-button {
@@ -466,6 +512,10 @@ html, body {
     }
 
     .home-title {
+        display: none;
+    }
+
+    .home-title-lg {
         font-size: 6.5rem;
         line-height: 1.1;
     }
