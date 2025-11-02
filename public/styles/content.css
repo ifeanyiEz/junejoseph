@@ -82,6 +82,11 @@
     line-height: 1.1;
 }
 
+.home-title-lg {
+    font-size: 8rem;
+    line-height: 1.1;
+}
+
 .sub-title {
     font-size: 3rem;
 }
