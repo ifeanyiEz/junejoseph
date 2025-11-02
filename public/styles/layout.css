@@ -72,7 +72,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 3.8rem;
+        padding-bottom: 1.8rem;
     }
 
     .navbar-nav {
@@ -90,10 +90,11 @@ html, body {
 
     #blog-welcome {
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 2fr;
+        grid-template-rows: 5fr 1fr;
     }
 
     .welcome-msg {
+        margin-top: 4.55rem;
         padding: 1.1rem;
     }
 
@@ -110,10 +111,17 @@ html, body {
     .hero-button .nav-link {
         font-size: 1.1rem !important;
         padding: 0.3rem 1rem;
+        margin-top: 0;
+        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
         display: none;
+    }
+
+    .footer-row .my-py-4 {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
     }
 
     .footer-grid {
