@@ -370,7 +370,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 11.5rem;
+        padding-bottom: 7rem;
     }
 
     #blog-welcome {
@@ -393,6 +393,7 @@ html, body {
 
     .sub-title {
         font-size: 2.5rem;
+        font-weight: 400;
     }
 
     .hero-button {
@@ -402,7 +403,11 @@ html, body {
     .footer-grid {
         gap: 0;
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+
+    .footer-info2 {
+        display: none;
     }
 
     .footer-justify,
@@ -427,7 +432,7 @@ html, body {
     }
 
     #body {
-        padding-bottom: 11.5rem;
+        padding-bottom: 7rem;
     }
 
     .home-title {
@@ -441,6 +446,7 @@ html, body {
 
     .sub-title {
         font-size: 2.5rem;
+        font-weight: 400;
     }
 
     .hero-button {
@@ -449,8 +455,12 @@ html, body {
 
     .footer-grid {
         gap: 0;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+    }
+
+    .footer-info2 {
+        display: none;
     }
 
     .footer-justify,
