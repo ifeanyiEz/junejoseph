@@ -56,6 +56,15 @@
     background-color: transparent;
 }
 
+.button-orange {
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+    border: 1px solid #f86503;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
 .nav-button-size {
     max-width: 10rem;
 }
@@ -288,7 +297,7 @@
 .small-text {
     font-size: 0.85rem;
     margin: 0;
-    padding: 0;
+    padding: 0.15rem 0.5rem;
 }
 
 .smaller-text {
@@ -303,6 +312,16 @@
 
 .xsmall-text {
     font-size: 0.55rem;
+}
+
+.bg-red {
+    --bs-bg-opacity: 1;
+    background-color: #ff0000 !important;
+}
+
+.bg-orange {
+    --bs-bg-opacity: 1;
+    background-color: #f86503 !important;
 }
 
 .bg-dark {
@@ -338,8 +357,8 @@
 
 .footer-info {
     display: flex;
-    gap: 0.5rem;
-    padding: 0.3rem 1rem;
+    gap: 0.165rem;
+    padding: 0.3rem 0.3rem;
     margin: 0.5rem 0;
     flex-direction: row;
     align-items: center;
@@ -347,8 +366,7 @@
 
 .footer-info2 {
     display: flex;
-    gap: 0.5rem;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.3rem;
     margin: 0.5rem 0;
     flex-direction: row;
     align-items: center;
