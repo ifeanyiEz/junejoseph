@@ -314,6 +314,11 @@
     font-size: 0.55rem;
 }
 
+.bg-white {
+    --bs-bg-opacity: 1;
+    background-color: #f8f5fe !important;
+}
+
 .bg-red {
     --bs-bg-opacity: 1;
     background-color: #ff0000 !important;
@@ -382,8 +387,4 @@
 
 ul .nav-item {
     list-style: none;
-}
-
-.copyright {
-    margin: 0 auto;
 }
