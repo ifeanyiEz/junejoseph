@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bs-breakpoint-xs: 0;
+    --bs-breakpoint-sm: 576px;
+    --bs-breakpoint-md: 768px;
+    --bs-breakpoint-lg: 992px;
+    --bs-breakpoint-xl: 1200px;
+    --bs-breakpoint-xxl: 1440px;
+    --bs-breakpoint-xxxl: 1680px;
+    --bs-breakpoint-xxxxl: 1920px;
+    --bs-breakpoint-xxxxxl: 2200px;
+}
+
 html, body {
     font-family: "Raleway", sans-serif !important;
     font-optical-sizing: auto;
@@ -74,14 +86,20 @@ html, body {
 }
 
 .footer-row .my-py-4 {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+    align-items: center !important;
+    gap: 1rem;
+}
+
+.copyright {
+    margin: 0 auto;
 }
 
 @media (max-width: 576px) {
 
     :root {
-        --body-padding-bottom: 1.8rem;
+        --body-padding-bottom: 2.2rem;
     }
 
     .container,
@@ -116,12 +134,22 @@ html, body {
         margin: 0.3rem 0.3rem;
     }
 
+    .nav-item #sub-button-xs {
+        padding: 0.2rem 0.7rem;
+    }
+
     .footer-grid {
         display: none;
     }
 
     #sub-form {
-        bottom: calc(--body-padding-bottom);
+        bottom: var(--body-padding-bottom);
+        right: 1rem;
+    }
+
+    .hide-sm-xl, 
+    .hide-xs-xl {
+        display: none;
     }
     
 }
@@ -129,7 +157,7 @@ html, body {
 @media (min-width: 577px) and (max-width: 768px) {
 
     :root {
-        --body-padding-bottom: 1.8rem;
+        --body-padding-bottom: 3.4rem;
     }
     
     .container,
@@ -143,7 +171,7 @@ html, body {
 
     html,
     body {
-        font-size: 13.5px;
+        font-size: 13.25px;
     }
 
     #body {
@@ -167,58 +195,26 @@ html, body {
         display: none;
     }
 
+    #sub-form {
+        bottom: var(--body-padding-bottom);
+        right: 1rem;
+    }
+
+    .nav-item #sub-button-sm {
+        padding: 0.16rem 0.7rem;
+    }
+
+    .hide-sm-xl, 
+    .hide-s-xl {
+        display: none;
+    }
+
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
 
     :root {
-        --body-padding-bottom: 1.8rem;
-    }
-
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 92%;
-    }
-
-    html,
-    body {
-        font-size: 13px;
-    }
-
-    #body {
-        padding-bottom: var(--body-padding-bottom);
-    }
-
-    .navbar-nav {
-        --bs-nav-link-padding-y: 0;
-    }
-
-    .nav-item .button-green {
-        padding: 0.3rem 1.5rem !important;
-    }
-
-    .nav-item .nav-link {
-        font-size: 1.15rem;
-        margin: 0.3rem 0.3rem;
-    }
-
-    .menu-margin {
-        margin: 0.75rem 0 0 0 !important;
-    }
-
-    .footer-grid {
-        display: none;
-    }
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-
-    :root {
-        --body-padding-bottom: 1.8rem;
+        --body-padding-bottom: 3.4rem;
     }
 
     .container,
@@ -239,8 +235,79 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
+    .nav-item .button-green {
+        padding: 0.3rem 1.5rem !important;
+    }
+
+    .nav-item .nav-link {
+        margin: 0.3rem 0.3rem;
+    }
+
+    .menu-margin {
+        margin: 0.75rem 0 0 0 !important;
+    }
+
     .footer-grid {
         display: none;
+    }
+
+    #sub-form {
+        bottom: var(--body-padding-bottom);
+        right: 1rem;
+    }
+
+    .nav-item #sub-button-sm {
+        padding: 0.16rem 0.7rem;
+    }
+
+    .hide-sm-xl, .hide-s-xl {
+        display: none;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+    :root {
+        --body-padding-bottom: 2.8rem;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 92%;
+    }
+
+    html,
+    body {
+        font-size: 13.75px;
+    }
+
+    #body {
+        padding-bottom: var(--body-padding-bottom);
+    }
+
+    .footer-grid {
+        display: none;
+    }
+
+    #sub-form {
+        bottom: var(--body-padding-bottom);
+        right: 1rem;
+    }
+
+    .hide-sm-xl, .hide-s-xl {
+        display: none;
+    }
+
+    .nav-item #sub-button-sm {
+        padding: 0.16rem 0.7rem;
     }
 
 }
@@ -248,7 +315,7 @@ html, body {
 @media (min-width: 1201px) and (max-width: 1440px) {
 
     :root {
-        --body-padding-bottom: 7rem;
+        --body-padding-bottom: 8.5rem;
     }
 
     .container,
@@ -275,6 +342,11 @@ html, body {
         grid-template-rows: auto auto;
     }
 
+    #sub-form {
+        bottom: var(--body-padding-bottom);
+        right: 1rem;
+    }
+
     .footer-info2 {
         display: none;
     }
@@ -283,12 +355,16 @@ html, body {
     .footer-justify2 {
         justify-content: center;
     }
+
+    .hide-xs-xl, .hide-s-xl {
+        display: none;
+    }
 }
 
 @media (min-width: 1441px) and (max-width: 1680px) {
 
     :root {
-        --body-padding-bottom: 6rem;
+        --body-padding-bottom: 5.5rem;
     }
 
     .container,
@@ -318,6 +394,12 @@ html, body {
         right: 1rem;
     }
 
+    .hide-sm-xl, 
+    .hide-xs-xl, 
+    .hide-s-xl {
+        display: none;
+    }
+
     .footer-justify,
     .footer-justify2 {
         justify-content: center;
@@ -327,7 +409,7 @@ html, body {
 @media (min-width: 1681px) and (max-width: 1920px) {
 
     :root {
-        --body-padding-bottom: 6rem;
+        --body-padding-bottom: 5.5rem;
     }
 
     .container,
@@ -353,12 +435,18 @@ html, body {
         right: 1rem;
     }
 
+    .hide-sm-xl,
+    .hide-xs-xl, 
+    .hide-s-xl {
+        display: none;
+    }
+
 }
 
 @media (min-width: 1921px) and (max-width: 2200px) {
 
     :root {
-        --body-padding-bottom: 5.8rem;
+        --body-padding-bottom: 5.5rem;
     }
 
     .container,
@@ -384,12 +472,18 @@ html, body {
         right: 1rem;
     }
 
+    .hide-sm-xl, 
+    .hide-xs-xl, 
+    .hide-s-xl {
+        display: none;
+    }
+
 }
 
 @media (min-width: 2201px) {
 
     :root {
-        --body-padding-bottom: 6rem;
+        --body-padding-bottom: 5.5rem;
     }
 
     .container,
@@ -413,6 +507,12 @@ html, body {
     #sub-form {
         bottom: var(--body-padding-bottom);
         right: 1rem;
+    }
+
+    .hide-sm-xl, 
+    .hide-xs-xl, 
+    .hide-s-xl {
+        display: none;
     }
 
 }
