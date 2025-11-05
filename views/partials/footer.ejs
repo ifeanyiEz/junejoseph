@@ -17,6 +17,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/">OTC Medications</a>
                                 </li>
+                                <li class="nav-item hide-sm-xl">
+                                    <button id="sub-button-md" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
+                                </li>
                             </ul>
                             <ul class="footer-info mb-md-0 footer-justify2">
                                 <li class="nav-item">
@@ -29,44 +32,52 @@
                                     <a class="nav-link" href="/">Rules & Guidlines</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link button-green bg-dark white-text bold-text" href="/">Ask a Question</a>
+                                    <button class="nav-link button-green bg-dark white-text bold-text" href="/">Ask a Question</button>
                                 </li>
                             </ul>
                             <div class="footer-info2 mb-md-0 footer-justify">
                                 <div class="nav-item">
                                     <button id="sub-button" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
                                 </div>
-                                <div id="sub-form" class="hidden-form">
-                                    <div class="right-text">
-                                        <button id="close-sub" type="button" class="button-orange bg-red white-text small-text bold-text">Close</button>
-                                    </div>
-                                    <div class="main-sub-form">
-                                        <form id="newsletter-form" class="form-body" action="">
-                                            <h4 class="green-text bold-text centered-text">Get Our Monthly Newsletter</h4>
-                                            <p class="xtiny-bm">Be the first to receive a digest of what's new and exciting from us.</p>
-                                            <hr class="large-bm">
-                                            <div class="main-sub">
-                                                <div class="form-group vtiny-bm">
-                                                    <label for="name" class="form-label green-text bold-text xtiny-bm">Your Name</label>
-                                                    <input type="text" class="form-control" name="name" id="name" placeholder="This is how we'd address you" required>
-                                                </div>
-                                                <div class="form-group large-bm">
-                                                    <label for="email" class="form-label green-text bold-text xtiny-bm">Your Email</label>
-                                                    <input type="email" class="form-control" name="email" id="email" placeholder="This is where you'd receive the newsletter" required>
-                                                </div>
-                                                <hr class="large-bm">
-                                                <div class="d-grid">
-                                                    <button id="sub-action" type="submit" class="button-orange bg-red bold-text white-text">Subscribe</button>
-                                                    <button id="sub-success" type="submit" class="hidden-button button-green bg-light bold-text white-text">Thank you for subscribing!</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-column justify-content-between my-py-4  centered-text">
+                        <div class="d-flex flex-row my-py-4 centered-text">
                             <p class="copyright regular-text">Copyright &copy; <%= new Date().getFullYear() %> <img src="/images/junejoseph2.2.png" alt="June Joseph Logo"> All rights reserved.</p>
+                            <div class="nav-item hide-xs-xl">
+                                <button id="sub-button-sm" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
+                            </div>
+                        </div>
+                        <div id="sub-form" class="hidden-form">
+                            <div class="right-text">
+                                <button id="close-sub" type="button" class="button-orange bg-red white-text small-text bold-text">Close</button>
+                            </div>
+                            <div class="main-sub-form">
+                                <form id="newsletter-form" class="form-body" action="">
+                                    <h4 class="green-text bold-text centered-text">Get Our Monthly Newsletter</h4>
+                                    <p class="xtiny-bm bold-text">Be the first to receive a digest of what's new and exciting from us.</p>
+                                    <hr class="large-bm">
+                                    <div class="main-sub">
+                                        <div class="form-group vtiny-bm">
+                                            <label for="name" class="form-label green-text bold-text xtiny-bm">Your Name</label>
+                                            <input type="text" class="form-control" name="name" id="name"
+                                                placeholder="This is how we'd address you" required>
+                                        </div>
+                                        <div class="form-group large-bm">
+                                            <label for="email" class="form-label green-text bold-text xtiny-bm">Your Email</label>
+                                            <input type="email" class="form-control" name="email" id="email"
+                                                placeholder="This is where you'd receive the newsletter" required>
+                                        </div>
+                                        <hr class="large-bm">
+                                        <div class="d-grid">
+                                            <button id="sub-action" type="submit"
+                                                class="button-orange bg-red bold-text white-text">Subscribe</button>
+                                            <button id="sub-success" type="submit"
+                                                class="hidden-button button-green bg-light bold-text white-text">Thank you for
+                                                subscribing!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
