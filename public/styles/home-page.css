@@ -1,9 +1,9 @@
 
 #body {
     position: absolute;
-    top: 5rem;;
+    top: 4rem;
     width: 100%;
-    height: 92.4vh;
+    height: 93.9vh;
     flex-grow: 1;
 }
 
@@ -63,7 +63,7 @@
 
     #blog-welcome {
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .welcome-msg {
@@ -85,11 +85,14 @@
         font-weight: 400 !important;
     }
 
+    .hero-button {
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
     .hero-button .nav-link {
         font-size: 1.1rem !important;
         padding: 0.3rem 1rem;
-        margin-top: 0;
-        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -142,7 +145,7 @@
 
     #blog-welcome {
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .welcome-msg {
@@ -171,8 +174,6 @@
     .hero-button .nav-link {
         font-size: 1.2rem !important;
         padding: 0.3rem 1rem;
-        margin-top: 0;
-        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -223,7 +224,7 @@
 
     #blog-welcome {
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .welcome-msg {
@@ -245,14 +246,12 @@
     }
 
     .hero-button {
-        gap: 2rem;
+        gap: 3rem;
     }
 
     .hero-button .nav-link {
         font-size: 1.2rem !important;
         padding: 0.3rem 2rem;
-        margin-top: 0;
-        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -290,7 +289,7 @@
 
     #blog-welcome {
         grid-template-columns: 1fr;
-        grid-template-rows: 5fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     .welcome-msg {
@@ -312,14 +311,12 @@
     }
 
     .hero-button {
-        gap: 2rem;
+        gap: 4rem;
     }
 
     .hero-button .nav-link {
         font-size: 1.2rem !important;
         padding: 0.3rem 2rem;
-        margin-top: 0;
-        margin-bottom: 6.5rem;
     }
 
     .grid-cover {
@@ -357,8 +354,8 @@
     }
 
     #blog-welcome {
-        grid-template-columns: auto;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 
     .home-title {
@@ -380,7 +377,12 @@
     }
 
     .hero-button {
-        display: none;
+        gap: 4rem;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
     }
 
     .footer-grid {
@@ -438,7 +440,12 @@
     }
 
     .hero-button {
-        display: none;
+        gap: 4rem;
+    }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
     }
     
     .footer-justify,
@@ -486,8 +493,14 @@
     }
 
     .hero-button {
-        display: none;
+        gap: 4rem;
     }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
+    }
+
 }
 
 @media (min-width: 1921px) and (max-width: 2200px) {
@@ -510,6 +523,10 @@
         font-size: 15.5px;
     }
 
+    #body {
+        padding-bottom: var(--body-padding-bottom);
+    }
+
     .home-title {
         display: none;
     }
@@ -524,13 +541,16 @@
         font-weight: 400 !important;
     }
 
-    #body {
-        padding-bottom: var(--body-padding-bottom);
+    .hero-button {
+        gap: 4rem;
     }
 
-    .hero-button {
-        display: none;
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
     }
+
+
 }
 
 @media (min-width: 2201px) {
@@ -562,6 +582,12 @@
     }
 
     .hero-button {
-        display: none;
+        gap: 4rem;
     }
+
+    .hero-button .nav-link {
+        font-size: 1.2rem !important;
+        padding: 0.3rem 2rem;
+    }
+
 }
