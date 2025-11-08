@@ -17,9 +17,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/">OTC Medications</a>
                                 </li>
-                                <li class="nav-item hide-sm-xl">
-                                    <button id="sub-button-md" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
-                                </li>
                             </ul>
                             <ul class="footer-info mb-md-0 footer-justify2">
                                 <li class="nav-item">
@@ -31,9 +28,6 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/">Rules & Guidlines</a>
                                 </li>
-                                <li class="nav-item">
-                                    <button id="footer-question" class="nav-link button-green bg-dark white-text bold-text" href="#question-form">Ask a Question</button>
-                                </li>
                             </ul>
                             <div class="footer-info2 mb-md-0 footer-justify">
                                 <div class="nav-item">
@@ -41,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-row my-py-4 centered-text">
+                        <div id="footer-sign" class="">
                             <p class="copyright regular-text">Copyright &copy; <%= new Date().getFullYear() %> <img src="/images/junejoseph2.2.png" alt="June Joseph Logo"> All rights reserved.</p>
                             <div class="nav-item hide-xs-xl">
                                 <button id="sub-button-sm" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
@@ -59,12 +53,12 @@
                                     <div class="main-sub">
                                         <div class="form-group vtiny-bm">
                                             <label for="name" class="form-label green-text vbold-text xtiny-bm">Your Name</label>
-                                            <input type="text" class="form-control" name="name" id="name"
+                                            <input type="text" class="form-control thin-text" name="name" id="name"
                                                 placeholder="This is how we'd address you" required>
                                         </div>
                                         <div class="form-group large-bm">
                                             <label for="email" class="form-label green-text vbold-text xtiny-bm">Your Email</label>
-                                            <input type="email" class="form-control" name="email" id="email"
+                                            <input type="email" class="form-control thin-text" name="email" id="email"
                                                 placeholder="This is where you'd receive the newsletter" required>
                                         </div>
                                         <hr class="large-bm">
@@ -81,7 +75,7 @@
                         </div>
                         <div id="question-form" class="hidden-form">
                             <div class="right-text">
-                                <button id="close-question" type="button" class="button-orange red-text vsmall-text bold-text">Close</button>
+                                <button id="close-question" type="button" class="button-orange red-text small-text bold-text">Close</button>
                             </div>
                             <div class="main-form">
                                 <form id="ask-question" class="form-body" action="">
@@ -91,7 +85,7 @@
                                     <div class="main-sub">
                                         <div class="form-group tiny-bm">
                                             <label for="subject" class="form-label green-text vbold-text xtiny-bm">Subject</label>
-                                            <input type="text" class="form-control" name="subject" id="subject"
+                                            <input type="text" class="form-control thin-text" name="subject" id="subject"
                                                 placeholder="One line that tells what your question is about" required>
                                         </div>
                                         <p id="question-tooltip" class="small-text no-bm bg-light white-text hidden-div">Check the box if your question is based on content you found useful on our website. Then select the appropriate content from the list that shows up.</p>
@@ -101,7 +95,7 @@
                                         </div>
                                         <div id="linked-content-group" class="form-group vtiny-bm">
                                             <label for="linked-content" class="form-label green-text vbold-text xtiny-bm">Linked Content</label>
-                                            <select name="linked-content" id="linked-content" class="form-control regular-text">
+                                            <select name="linked-content" id="linked-content" class="form-control thin-text">
                                                 <option value="none-selected">Select the content linked to your question</option>
                                                 <option value="content-1">Content 1</option>
                                                 <option value="content-2">Content 2</option>
@@ -112,12 +106,12 @@
                                         </div>
                                         <div class="form-group vtiny-bm">
                                             <label for="details" class="form-label green-text vbold-text xtiny-bm">Details</label>
-                                            <textarea name="details" id="details" class="form-control" placeholder="Your question in detail"
+                                            <textarea name="details" id="details" class="form-control thin-text" placeholder="Your question in detail"
                                                 required></textarea>
                                         </div>
                                         <div class="form-group tiny-bm">
                                             <label for="priority" class="form-label green-text vbold-text xtiny-bm">Priority</label>
-                                            <select name="priority" id="priority" class="form-control regular-text" required>
+                                            <select name="priority" id="priority" class="form-control thin-text" required>
                                                 <option value="none-selected">How soon would you want to get a response?</option>
                                                 <option value="critical">Within the hour</option>
                                                 <option value="urgent">Within 12 hours</option>
