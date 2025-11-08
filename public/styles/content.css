@@ -1,3 +1,4 @@
+
 .me-auto {
     margin-left: auto !important;
     margin-right: 0 !important;
@@ -13,8 +14,8 @@
 }
 
 .logo-area {
-    width: 12rem;
-    height: 3rem;
+    width: 11rem;
+    height: 2rem;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -32,7 +33,7 @@
     font-size: 1.2rem;
     padding: 0.55rem 1rem;
     text-align: center;
-    border: 1px solid #ffffff;
+    border: 2px solid #ffffff;
     border-radius: 0.8rem;
     color: #ffffff;
     background-color: transparent;
@@ -51,7 +52,7 @@
     font-size: 1rem;
     padding: 0.3rem 2rem;
     text-align: center;
-    border: 1px solid #00a500;
+    border: 1px solid #008c8c;
     border-radius: 1rem;
     background-color: transparent;
 }
@@ -60,7 +61,7 @@
     font-size: 1rem;
     padding: 0.3rem 0.7rem;
     text-align: center;
-    border: 1px solid #f86503;
+    border: 1px solid #f83c03;
     border-radius: 1rem;
     background-color: transparent;
 }
@@ -76,6 +77,11 @@
 
 .nav-item .nav-link {
     margin: 0 0.3rem;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--bs-nav-link-hover-color);
 }
 
 .welcome-msg {
@@ -102,7 +108,7 @@
 
 .hero-button {
     max-width: 40rem;
-    margin: 2rem 0 1rem 0;
+    margin: 6rem auto;
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
@@ -132,19 +138,19 @@
 }
 
 .orange-border-top {
-    border-top: 0.5px solid #f86503;
+    border-top: 0.5px solid #f83c03;
 }
 
 .orange-border-right {
-    border-right: 0.5px solid #f86503;
+    border-right: 0.5px solid #f83c03;
 }
 
 .orange-border-bottom {
-    border-bottom: 0.5px solid #f86503;
+    border-bottom: 0.5px solid #f83c03;
 }
 
 .orange-border-left {
-    border-left: 0.5px solid #f86503;
+    border-left: 0.5px solid #f83c03;
 }
 
 .white-text {
@@ -152,7 +158,7 @@
 }
 
 .green-text {
-    color: #008000 !important;
+    color: #008c8c !important;
 }
 
 .blue-text {
@@ -326,17 +332,17 @@
 
 .bg-orange {
     --bs-bg-opacity: 1;
-    background-color: #f86503 !important;
+    background-color: #f83c03 !important;
 }
 
 .bg-dark {
     --bs-bg-opacity: 1;
-    background-color: #008000 !important;
+    background-color: #008c8c !important;
 }
 
 .bg-light {
     --bs-bg-opacity: 1;
-    background-color: #0fb80f !important;
+    background-color: #0cb466 !important;
 }
 
 .footer-row {
