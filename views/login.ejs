@@ -1,0 +1,59 @@
+
+<%- include("partials/header.ejs") %>
+
+<div id="blog-welcome">
+    <div class="">
+        <div class="welcome-msg">
+            <div class="login-form">
+                <h4 class="green-text vbold-text centered-text">Login to share your thoughts</h4>
+                <hr class="large-bm">
+                <form action="" method="post">
+                    <div class="form-group vtiny-bm">
+                        <label for="email" class="form-label green-text vbold-text xtiny-bm">Email</label>
+                        <input type="email" class="form-control thin-text" name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group large-bm">
+                        <label for="password" class="form-label green-text vbold-text xtiny-bm">Password</label>
+                        <input type="password" class="form-control thin-text" name="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <hr class="large-bm">
+                    <div class="d-grid login-button">
+                        <button id="login-submit" type="submit" class="button-green bg-dark white-text bold-text tiny-bm">Click to Login</button>
+                        <p class="bold-text tiny-bm">Don't have an account? Click <a href="/signup">here</a> to create one.</p>
+                        <% if (locals.signupInfo) { %>
+                            <h6 class="bold-text red-text"><%= signupInfo.message %></h6>
+                        <% } %>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="grid-cover">
+        <div class="grid-cell"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-left"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-left"></div>
+        <div class="grid-cell orange-border-top"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-right orange-border-left"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-right orange-border-left"></div>
+        <div class="grid-cell orange-border-top orange-border-left orange-border-bottom"></div>
+        <div class="grid-cell orange-border-top orange-border-left orange-border-bottom"></div>
+        <div class="grid-cell orange-border-top orange-border-left orange-border-bottom"></div>
+        <div class="grid-cell orange-border-top orange-border-left"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
