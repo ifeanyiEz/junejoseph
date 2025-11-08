@@ -86,13 +86,13 @@
     }
 
     .hero-button {
-        gap: 2rem;
-        padding: 0 2rem;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 
     .hero-button .nav-link {
         font-size: 1.1rem !important;
-        padding: 0.3rem 1rem;
+        padding: 0.3rem 0.7rem;
     }
 
     .grid-cover {
