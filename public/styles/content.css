@@ -126,10 +126,23 @@
     background-color: #ffffff;
     border: 1px solid #dedede;
     border-radius: 1rem;
-    box-shadow: 2px 2px 20px #e3e3e3;
+    box-shadow: 2px 2px 20px #d3d3d3;
 }
 
 /* END OF LOGIN FORM */
+
+.shaded-area {
+    border: 1px solid #dedede;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 20px #d3d3d3;
+}
+
+.author {
+    max-width: 35%;
+    float: right !important;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
 
 .grid-cover {
     width: 100%;
@@ -213,6 +226,14 @@
     font-weight: 900 !important;
 }
 
+.my-p1 {
+    padding: 1.5rem !important;
+}
+
+.my-p2 {
+    padding: 2rem !important;
+}
+
 .my-py-4 {
     padding-top: 1rem !important;
     padding-bottom: 1.5rem !important;
@@ -294,6 +315,10 @@
 .xtiny-sm {
     margin-left: 0.5rem !important;
     margin-right: 0.5rem !important;
+}
+
+.p-focus {
+    font-size: 1.2rem;
 }
 
 .thin-text {
