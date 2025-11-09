@@ -1,4 +1,19 @@
 
+#blog-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    padding: 1rem 0;
+    height: 3rem;
+}
+
 #body {
     position: absolute;
     top: 4rem;
