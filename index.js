@@ -98,14 +98,16 @@ app.route("/login")
             if (passwordMatch) {
 
                 const alreadyLoggedIn = loginData.find(user => user.email === email);
+
                 if (!alreadyLoggedIn) {
-                    loginData.unshift(existingUser);
 
                     thisLogin.id = existingUser.userId;
                     thisLogin.firstName = existingUser.firstName;
                     thisLogin.lastName = existingUser.lastName;
                     thisLogin.email = existingUser.email;
                     thisLogin.password = existingUser.password;
+
+                     loginData.unshift(thisLogin);
                 }
                 console.log(`This login Id is: ${ thisLogin.id }`)
                 return res.redirect("/");
