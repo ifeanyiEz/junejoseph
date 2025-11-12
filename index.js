@@ -4,6 +4,20 @@ import methodOverride from "method-override";
 const app = express();
 const port = 5000;
 
+const loginData = [];
+const thisLogin = {};
+const userAccounts = [];
+const subCategories = [];
+const categories = [];
+
+function slugGen(text) {
+return text.toString().toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
