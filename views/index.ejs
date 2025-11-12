@@ -11,12 +11,11 @@
             <% if (locals.thisLogin && thisLogin.email) { %>
                 <button id="body-question" class="nav-link button-green bg-dark white-text bold-text">
                     Ask a Question</button>
-                <a href="/focus" class="nav-link button-green green-text bold-text">Join a Conversation</a>
             <% } else { %>
             <a id="question-login" href="/login" class="nav-link button-green bg-dark white-text bold-text">Ask a
                 Question</a>
-            <a href="/login" class="nav-link button-green green-text bold-text">Join a Conversation</a>
             <% } %>
+            <a href="/focus" class="nav-link button-green green-text bold-text">Join a Conversation</a>
         </div>
     </div>
     <div class="grid-cover">
