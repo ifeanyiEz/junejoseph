@@ -20,8 +20,8 @@
                     <div class="d-grid login-button">
                         <button id="login-submit" type="submit" class="button-green bg-dark white-text bold-text tiny-bm">Click to Sign In</button>
                         <p class="bold-text tiny-bm">Don't have an account? Click <a href="/signup">here</a> to create one.</p>
-                        <% if (locals.signupInfo) { %>
-                            <h6 class="bold-text red-text"><%= signupInfo.message %></h6>
+                        <% if (locals.invalidCredentials) { %>
+                            <h6 class="bold-text red-text"><%= invalidCredentials.message %></h6>
                         <% } %>
                     </div>
                 </form>
