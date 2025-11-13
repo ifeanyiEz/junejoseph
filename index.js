@@ -170,10 +170,18 @@ app.route("/signup")
 
 app.route("/blogs/new")
     .get((req, res) => {
+        // GET /blogs/new: Opens the form used to create a new blog post
         res.render("new-blog.ejs", { thisLogin, allBlogs });
+    });
+
+app.route("/blogs")
+    .get((req, res) => {
+        // Fetch all blog posts from the database (or array)
+        res.render("all-blog.ejs", { thisLogin, allBlogs });
     })
     .post((req, res) => {
-        res.redirect("/");
+        // Handle form submission to create a new post (from the /blogs/new form)
+        res.redirect("/blogs");
     });
 
 app.route("/focus")
