@@ -14,12 +14,11 @@
 }
 
 .logo-area {
-    width: 11rem;
-    height: 2rem;
+    width: 9rem;
+    height: 1.5rem;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    margin-top: 1rem;
 }
 
 .my-navbar-logo {
@@ -33,7 +32,7 @@
     font-size: 1.2rem;
     padding: 0.55rem 1rem;
     text-align: center;
-    border: 2px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 0.8rem;
     color: #ffffff;
     background-color: transparent;
@@ -203,7 +202,7 @@
 }
 
 .red-text {
-    color: #ff0000;
+    color: #ff0000 !important;
 }
 
 .shd-text {
@@ -342,7 +341,7 @@
 }
 
 .small-text {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
     margin: 0;
     padding: 0.15rem 0.5rem;
 }
@@ -354,7 +353,7 @@
 }
 
 .vsmall-text {
-    font-size: 0.65rem;
+    font-size: 0.65rem !important;
 }
 
 .xsmall-text {
@@ -435,3 +434,80 @@
 ul .nav-item {
     list-style: none;
 }
+
+/* COLLAPSIBLE SIDEBAR */
+
+.sidepanel {
+  height: 100%;
+  width: max-content;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  transition: 1s;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 0.35rem 2rem;
+  margin: 0.15rem 0.5rem;
+  text-decoration: none;
+  font-size: 1.10rem;
+  line-height: 1;
+  color: #ffffff;
+  display: block;
+  transition: 0.5s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 0.25rem;
+  padding: 0.3rem 0.75rem !important;
+  margin-top: 1rem;
+  margin-left: auto;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  padding: 0.15rem 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* END OF COLLAPSIBLE SIDEBAR */
+
+/* PORTAL CONTAINER */
+
+.portal-container {
+    display: flex;
+}
+
+#portal-nav {
+    padding-top: 2rem;
+}
+
+#portal-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: margin-left .5s;
+    margin: 0.5rem 0.5rem 0.5rem 14.5rem;
+}
+
+/* END OF PORTAL CONTAINER */
