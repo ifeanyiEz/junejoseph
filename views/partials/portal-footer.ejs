@@ -1,0 +1,127 @@
+        </div>
+        <div id="portal-footer">
+            <footer class="my-py-5 border-top">
+                <div class="container">
+                    <div class="footer-row">
+                        <div id="footer-sign" class="">
+                            <p class="copyright regular-text">Copyright &copy; <%= new Date().getFullYear() %> <img src="/images/junejoseph2.2.png" alt="June Joseph Logo"> All rights reserved.</p>
+                            <div class="nav-item hide-xs-xl">
+                                <button id="sub-button-sm" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
+                            </div>
+                        </div>
+                        <div id="sub-form" class="hidden-form">
+                            <div class="right-text">
+                                <button id="close-sub" type="button" class="button-orange red-text small-text bold-text">Close</button>
+                            </div>
+                            <div class="main-form">
+                                <form id="newsletter-form" class="form-body" action="">
+                                    <h4 class="green-text vbold-text centered-text">Get Our Monthly Newsletter</h4>
+                                    <p class="xtiny-bm bold-text">Be the first to receive a digest of what's new and exciting from us.</p>
+                                    <hr class="large-bm">
+                                    <div class="main-sub">
+                                        <div class="form-group vtiny-bm">
+                                            <label for="name" class="form-label green-text vbold-text xtiny-bm">Your Name</label>
+                                            <input type="text" class="form-control regular-text" name="name" id="name"
+                                                placeholder="This is how we'd address you" required>
+                                        </div>
+                                        <div class="form-group large-bm">
+                                            <label for="email" class="form-label green-text vbold-text xtiny-bm">Your Email</label>
+                                            <input type="email" class="form-control regular-text" name="email" id="email"
+                                                placeholder="This is where you'd receive the newsletter" required>
+                                        </div>
+                                        <hr class="large-bm">
+                                        <div class="d-grid">
+                                            <button id="sub-action" type="submit"
+                                                class="button-green bg-dark bold-text white-text">Subscribe</button>
+                                            <button id="sub-success" type="submit"
+                                                class="hidden-button button-green bg-light bold-text white-text">Thank you for
+                                                subscribing!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="question-form" class="hidden-form">
+                            <div class="right-text">
+                                <button id="close-question" type="button" class="button-orange red-text small-text bold-text">Close</button>
+                            </div>
+                            <div class="main-form">
+                                <form id="ask-question" class="form-body" action="">
+                                    <h4 class="green-text vbold-text centered-text">What Would You Like to Know?</h4>
+                                    <p class="xtiny-bm bold-text centered-text">Get professional advice on the most effective solutions to your lifestyle or health concerns.</p>
+                                    <hr class="large-bm">
+                                    <div class="main-sub">
+                                        <div class="form-group tiny-bm">
+                                            <label for="subject" class="form-label green-text vbold-text xtiny-bm">Subject</label>
+                                            <input type="text" class="form-control regular-text" name="subject" id="subject"
+                                                placeholder="One line that tells what your question is about" required>
+                                        </div>
+                                        <p id="question-tooltip" class="small-text no-bm bg-light white-text hidden-div">Check the box if your question is based on content you found useful on our website. Then select the appropriate content from the list that shows up.</p>
+                                        <div id="question-checkbox" class="form-group vtiny-bm">
+                                            <input type="checkbox" name="linked-to-content" id="linked-to-content" value="Yes">
+                                            <label for="linked-to-content" class="form-label green-text vbold-text xtiny-bm">Question is based on content from<img src="/images/junejoseph2.2.png" alt="June Joseph tiny logo"></label>
+                                        </div>
+                                        <div id="linked-content-group" class="form-group vtiny-bm">
+                                            <label for="linked-content" class="form-label green-text vbold-text xtiny-bm">Linked Content</label>
+                                            <select name="linked-content" id="linked-content" class="form-control regular-text">
+                                                <option value="none-selected">Select the content linked to your question</option>
+                                                <option value="content-1">Content 1</option>
+                                                <option value="content-2">Content 2</option>
+                                                <option value="content-3">Content 3</option>
+                                                <option value="content-4">Content 4</option>
+                                                <option value="content-5">Content 5</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group vtiny-bm">
+                                            <label for="details" class="form-label green-text vbold-text xtiny-bm">Details</label>
+                                            <textarea name="details" id="details" class="form-control regular-text" placeholder="Your question in detail"
+                                                required></textarea>
+                                        </div>
+                                        <div class="form-group tiny-bm">
+                                            <label for="priority" class="form-label green-text vbold-text xtiny-bm">Priority</label>
+                                            <select name="priority" id="priority" class="form-control regular-text" required>
+                                                <option value="none-selected">How soon would you want to get a response?</option>
+                                                <option value="critical">Within the hour</option>
+                                                <option value="urgent">Within 12 hours</option>
+                                                <option value="high">Within 24 hours</option>
+                                                <option value="medium">Within the week</option>
+                                                <option value="low">Any time. It's not priority</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group vtiny-bm">
+                                            <input type="checkbox" name="make-public" id="make-public" value="Yes">
+                                            <label for="make-public" class="form-label green-text vbold-text xtiny-bm">Share question and response in public domain</label>
+                                            <p class="small-text red-text no-bm">I understand that questions and corresponding responses are private by default, but I would like to help other website users benefit from your expert opinion.</p>
+                                        </div>
+                                        <hr class="large-bm">
+                                        <div class="d-grid">
+                                            <button id="question-action" type="submit" class="button-green bg-dark bold-text white-text">Forward this
+                                                Question</button>
+                                            <button id="question-success" type="submit"
+                                                class="hidden-button button-green bg-light bold-text white-text">Thank you for asking!</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+        document.getElementById("mySidepanel").style.width = "max-content";
+        document.getElementById("portal-main").style.marginLeft = "14.5rem";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+        document.getElementById("portal-main").style.marginLeft = "0.5rem";
+        }
+    </script>
+    <script src="/js/newsletter-sub.js"></script>
+    <script src="/js/question-form.js"></script>
+</body>
+
+</html>
