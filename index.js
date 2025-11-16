@@ -110,7 +110,7 @@ app.route("/login")
                      loginData.unshift(thisLogin);
                 }
                 console.log(`This login Id is: ${ thisLogin.id }`)
-                return res.redirect("/");
+                return res.redirect("/user-portal");
         
             } else {
                 return res.status(401).render("login.ejs", { error: invalidCredentials });
@@ -121,6 +121,11 @@ app.route("/login")
             return res.status(500).render("login.ejs", { error: { message: "An internal server error occurred." } });
         }
     });
+
+app.route("/user-portal")
+    .get((req, res) => {
+        res.render("user-portal.ejs");
+    })
 
 app.route("/signup")
     .get((req, res) => {
