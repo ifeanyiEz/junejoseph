@@ -5,7 +5,6 @@
 }
 
 .navbar {
-    margin-bottom: 20px;
     border-bottom: 1px solid #008000;
 }
 
@@ -14,8 +13,8 @@
 }
 
 .logo-area {
-    width: 9rem;
-    height: 1.5rem;
+    width: 117px;
+    height: 19.5px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -445,29 +444,26 @@ ul .nav-item {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  margin-top: 4rem;
+  margin-top: 45px;
   padding-top: 3rem;
   transition: 1s;
 }
 
-/* The sidepanel links */
 .sidepanel a {
   padding: 0.35rem 2rem;
-  margin: 0.15rem 0.5rem;
+  margin: 0.2rem 0.5rem;
   text-decoration: none;
-  font-size: 1.10rem;
+  font-size: 1rem;
   line-height: 1;
   color: #ffffff;
   display: block;
   transition: 0.5s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidepanel a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidepanel .closebtn {
   position: absolute;
   top: 0;
@@ -477,7 +473,6 @@ ul .nav-item {
   margin-left: auto;
 }
 
-/* Style the button that is used to open the sidepanel */
 .openbtn {
   cursor: pointer;
   margin-left: 0.5rem;
@@ -489,16 +484,17 @@ ul .nav-item {
   background-color: #444;
 }
 
+#signout-button {
+    border-radius: 1rem;
+    border: 1px solid #ffffff;
+}
+
 /* END OF COLLAPSIBLE SIDEBAR */
 
 /* PORTAL CONTAINER */
 
 .portal-container {
     display: flex;
-}
-
-#portal-nav {
-    padding-top: 2rem;
 }
 
 #portal-main {
