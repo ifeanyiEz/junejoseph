@@ -45,7 +45,7 @@ html, body {
 
 #portal-body {
     position: absolute;
-    top: 4rem;
+    top: 45.5px;
     padding-bottom: 45px;
 }
 
@@ -136,6 +136,21 @@ html, body {
     margin: 0 auto;
 }
 
+#portal-nav {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+#sign-out {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 100%;
+    width: 100%;
+    padding: 0
+}
+
 .copyright {
     margin: 0.6rem 0.3rem;
 }
@@ -177,8 +192,13 @@ html, body {
         height: var(--body-padding-bottom);
     }
 
+    .navbar {
+        --bs-navbar-padding-x: 0;
+        --bs-navbar-padding-y: 0.3rem;
+    }
+
     .navbar-nav {
-        --bs-nav-link-padding-y: 0;
+        --bs-nav-link-padding-y: 0.3rem;
     }
 
     .nav-item .button-green {
@@ -208,7 +228,8 @@ html, body {
     }
 
     .hide-sm-xl, 
-    .hide-xs-xl {
+    .hide-xs-xl,
+    .hide-sm {
         display: none;
     }
     
@@ -277,7 +298,8 @@ html, body {
     }
 
     .hide-sm-xl, 
-    .hide-s-xl {
+    .hide-s-xl,
+    .hide-sm {
         display: none;
     }
 
@@ -398,6 +420,10 @@ html, body {
         height: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
     #better-way .home-cols {
         grid-template-columns: auto;
         grid-template-rows: auto auto;
@@ -410,6 +436,10 @@ html, body {
     .nav-item .nav-link {
         font-size: 1rem;
         margin: 0.4rem 0.3rem;
+    }
+
+    .menu-margin {
+        margin: 0.85rem 0 0 0 !important;
     }
 
     .hide-sm-xl, .hide-s-xl {
@@ -446,6 +476,10 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
     #portal-header {
         padding: 2.1rem;
     }
@@ -472,6 +506,10 @@ html, body {
     .nav-item .nav-link {
         font-size: 1rem;
         margin: 0.4rem 0.3rem;
+    }
+
+    .menu-margin {
+        margin: 0.85rem 0 0 0 !important;
     }
 
     .nav-item #sub-button-sm {
@@ -512,12 +550,20 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
+    .menu-margin {
+        margin: 0.45rem 0 0 0 !important;
+    }
+
     #portal-header {
         padding: 1.75rem;
     }
 
     .sidepanel {
-        margin-top: 3rem;
+        margin-top: 40px;
     }
 
     .footer-grid {
@@ -564,12 +610,20 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
+    .menu-margin {
+        margin: 0.45rem 0 0 0 !important;
+    }
+
     #portal-header {
         padding: 1.75rem;
     }
 
     .sidepanel {
-        margin-top: 3rem;
+        margin-top: 40px;
     }
 
     .nav-item #sub-button {
@@ -608,8 +662,16 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
+    .menu-margin {
+        margin: 0.45rem 0 0 0 !important;
+    }
+
     .sidepanel {
-        margin-top: 3rem;
+        margin-top: 40px;
     }
 
     .nav-item #sub-button {
@@ -648,8 +710,20 @@ html, body {
         padding-bottom: var(--body-padding-bottom);
     }
 
+    .navbar-nav {
+        --bs-nav-link-padding-y: 0;
+    }
+
+    .nav-item .nav-link {
+        font-size: 1rem;
+    }
+
+    .menu-margin {
+        margin: 0.5rem 0 0 0 !important;
+    }
+
     .sidepanel {
-        margin-top: 3rem;
+        margin-top: 40px;
     }
 
     .nav-item #sub-button {
