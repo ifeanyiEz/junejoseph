@@ -46,23 +46,27 @@
                         <ul class="navbar-nav mb-md-0 me-auto">
                             <!-- <li class="nav-item">
                                 <a class="nav-link menu-margin" href="/focus">This Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/life">Life Style</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/disease">Conditions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/questions">Info Bank</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link button-green nav-button-size" href="/login">Sign In</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link button-green nav-button-size bg-dark white-text" href="/signup">Sign Out</a>
+                                <a class="nav-link" href="/questions">
+                                   <i class="bi bi-bell" style="color: #008c8c; font-size: 1.2rem;"></i><span class=" hide-sm"> Questions</span></a>
                             </li>
-                            <!-- <li class="nav-item hide-s-xl">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/subscriptions">
+                                   <i class="bi bi-envelope" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Subscriptions</span></a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/users">
+                                   <i class="bi bi-people" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Accounts</span></a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link" href="/settings">
+                                   <i class="bi bi-gear-fill" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Settings</span></a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link button-green bg-dark white-text" href="/sign-out">Sign Out</a>
+                            </li>
+                            <li class="nav-item hide-s-xl">
                                 <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
                             </li> -->
                         </ul>
@@ -71,4 +75,24 @@
             </nav>
         </div>
         <div id="portal-body">
+            <section id="user-portal" class="portal-container">
+                <div id="mySidepanel" class="sidepanel bg-dark">
+                    <a href="javascript:void(0)" class="closebtn button vsmall-text white-text" onclick="closeNav()">Close</a>
+                    <div id="portal-nav" class="large-tbm">
+                        <a href="#" class="xtiny-tbm">Dashboard</a>
+                        <a href="#" class="xtiny-tbm">Articles</a>
+                        <a href="#" class="xtiny-tbm">Blogs Posts</a>
+                        <a href="#" class="xtiny-tbm">All Questions</a>
+                        <a href="#" class="xtiny-tbm">My Questions</a>
+                        <a href="#" class="xtiny-tbm">Subscriptions</a>
+                        <a href="#" class="xtiny-tbm">Registered Users</a>
+                        <div id="sign-out">
+                            <a href="/signout" id="signout-button" class="xtiny-tbm">Sign Out</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="openbtn vtiny-tbm button-green bg-dark vsmall-text white-text" onclick="openNav()">Open</button>
+                    <div id="portal-main">
+                        <p>Content...&#9776; &times;</p>
         
