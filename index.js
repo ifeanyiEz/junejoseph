@@ -122,9 +122,9 @@ app.route("/login")
         }
     });
 
-app.route("/user-portal")
+app.route("/user-portal/dashboard")
     .get((req, res) => {
-        res.render("user-portal.ejs");
+        res.render("dashboard.ejs");
     })
 
 app.route("/signup")
