@@ -185,6 +185,14 @@ html, body {
         padding: 2.2rem;
     }
 
+    .sidepanel {
+        width: 0;
+    }
+
+    #portal-main {
+        margin: 0.5rem;
+    }
+
     #blog-body {
         padding-bottom: var(--body-padding-bottom);
     }
@@ -268,6 +276,14 @@ html, body {
         padding: 2.15rem;
     }
 
+    .sidepanel {
+        width: 0;
+    }
+
+    #portal-main {
+        margin: 0.5rem;
+    }
+
     #blogs-footer {
         height: var(--body-padding-bottom);
     }
@@ -336,6 +352,14 @@ html, body {
 
     #portal-header {
         padding: 2.15rem;
+    }
+
+    .sidepanel {
+        width: 0;
+    }
+
+    #portal-main {
+        margin: 0.5rem;
     }
 
     .author {
@@ -411,6 +435,14 @@ html, body {
 
     #portal-header {
         padding: 2.15rem;
+    }
+
+    .sidepanel {
+        width: 0;
+    }
+
+    #portal-main {
+        margin: 0.5rem;
     }
 
     .author {
