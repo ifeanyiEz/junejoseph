@@ -101,8 +101,8 @@
     }
 
     .hero-button {
-        gap: 1rem;
-        padding: 0 1rem;
+        gap: 2rem;
+        padding: 0 2rem;
     }
 
     .hero-button .nav-link {
@@ -183,7 +183,8 @@
     }
 
     .hero-button {
-        gap: 2rem;
+        gap: 2.5rem;
+        padding: 0 2rem;
     }
 
     .hero-button .nav-link {
