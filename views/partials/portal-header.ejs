@@ -48,25 +48,31 @@
                                 <a class="nav-link menu-margin" href="/focus">This Blog</a>
                             </li> -->
                             <li class="nav-item">
-                                <a class="nav-link" href="/questions">
-                                   <i class="bi bi-bell" style="color: #008c8c; font-size: 1.2rem;"></i><span class=" hide-sm"> Questions</span></a>
+                                <a class="nav-link" href="/user-portal/questions">
+                                   <i class="bi bi-bell" style="color: #008c8c; font-size: 1.2rem;"></i><span class=" hide-sm"> Questions</span>
+                                </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/subscriptions">
-                                   <i class="bi bi-envelope" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Subscriptions</span></a>
+                                <a class="nav-link" href="/user-portal/subscriptions">
+                                   <i class="bi bi-envelope" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Subscriptions</span>
+                                </a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="/users">
-                                   <i class="bi bi-people" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Accounts</span></a>
+                                <a class="nav-link" href="/user-portal/users">
+                                   <i class="bi bi-people" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Accounts</span>
+                                </a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="/settings">
-                                   <i class="bi bi-gear-fill" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Settings</span></a>
+                                <a class="nav-link" href="/user-portal/settings">
+                                   <i class="bi bi-gear-fill" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Settings</span>
+                                </a>
                             </li>
-                            <!-- <li class="nav-item">
-                                <a class="nav-link button-green bg-dark white-text" href="/sign-out">Sign Out</a>
+                             <li class="nav-item">
+                                <a class="nav-link" href="/user-portal/profile">
+                                   <i class="bi bi-person-square" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Full Name</span>
+                                </a>
                             </li>
-                            <li class="nav-item hide-s-xl">
+                            <!-- <li class="nav-item hide-s-xl">
                                 <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
                             </li> -->
                         </ul>
@@ -79,15 +85,31 @@
                 <div id="mySidepanel" class="sidepanel bg-dark">
                     <a href="javascript:void(0)" class="closebtn button vsmall-text white-text" onclick="closeNav()">Close</a>
                     <div id="portal-nav" class="large-tbm">
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-columns-gap" style="color: #ffffff; font-size: 1.2rem;"></i>  Dashboard</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-file-text-fill" style="color: #ffffff; font-size: 1.2rem;"></i> Articles</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-journal-text" style="color: #ffffff; font-size: 1.2rem;"></i> Blogs Posts</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-question-circle-fill" style="color: #ffffff; font-size: 1.2rem;"></i> All Questions</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-question-diamond-fill" style="color: #ffffff; font-size: 1.2rem;"></i> My Questions</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-envelope-fill" style="color: #ffffff; font-size: 1.2rem;"></i> Subscriptions</a>
-                        <a href="#" class="xtiny-tbm"><i class="bi bi-people-fill" style="color: #ffffff; font-size: 1.2rem;"></i> Registered Users</a>
+                        <a href="/user-portal/dashboard" class="xtiny-tbm">
+                            <i class="bi bi-columns-gap" style="color: #ffffff; font-size: 1.2rem;"></i>  Dashboard
+                        </a>
+                        <a href="/user-portal/articles" class="xtiny-tbm">
+                            <i class="bi bi-file-text" style="color: #ffffff; font-size: 1.2rem;"></i> Articles
+                        </a>
+                        <a href="/user-portal/blog-posts" class="xtiny-tbm">
+                            <i class="bi bi-journal-text" style="color: #ffffff; font-size: 1.2rem;"></i> Blogs Posts
+                        </a>
+                        <a href="/user-portal/all-questions" class="xtiny-tbm">
+                            <i class="bi bi-question-circle" style="color: #ffffff; font-size: 1.2rem;"></i> All Questions
+                        </a>
+                        <a href="/user-portal/my-questions" class="xtiny-tbm">
+                            <i class="bi bi-question-diamond" style="color: #ffffff; font-size: 1.2rem;"></i> My Questions
+                        </a>
+                        <a href="/user-portal/subscriptions" class="xtiny-tbm">
+                            <i class="bi bi-envelope" style="color: #ffffff; font-size: 1.2rem;"></i> Subscriptions
+                        </a>
+                        <a href="/user-portal/users" class="xtiny-tbm">
+                            <i class="bi bi-people" style="color: #ffffff; font-size: 1.2rem;"></i> Registered Users
+                        </a>
                         <div id="sign-out">
-                            <a href="/signout" id="signout-button" class="xtiny-tbm">Sign Out</a>
+                            <a href="/signout" id="signout-button" class="xtiny-tbm">
+                                <i class="bi bi-box-arrow-right" style="color: #ffffff; font-size: 1.2rem;"></i> Sign Out
+                            </a>
                         </div>
                     </div>
                 </div>
