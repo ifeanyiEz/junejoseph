@@ -110,7 +110,7 @@ app.route("/login")
                      loginData.unshift(thisLogin);
                 }
                 console.log(`This login Id is: ${ thisLogin.id }`)
-                return res.redirect("/user-portal");
+                return res.redirect("/");
         
             } else {
                 return res.status(401).render("login.ejs", { error: invalidCredentials });
