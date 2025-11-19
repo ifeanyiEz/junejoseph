@@ -438,7 +438,7 @@ ul .nav-item {
 
 .sidepanel {
   height: 100%;
-  width: max-content;
+  width: 14.5rem;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -446,7 +446,7 @@ ul .nav-item {
   overflow-x: hidden;
   margin-top: 45px;
   padding-top: 3rem;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .sidepanel a {
@@ -503,7 +503,7 @@ ul .nav-item {
     flex-direction: column;
     justify-content: center;
     transition: margin-left .5s;
-    margin: 0.5rem 0.5rem 0.5rem 14.5rem;
+    margin: 0.5rem 0.5rem 0.5rem 15.5rem;
 }
 
 /* END OF PORTAL CONTAINER */
