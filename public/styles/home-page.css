@@ -102,7 +102,7 @@
 
     .hero-button {
         gap: 1rem;
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
 
     .hero-button .nav-link {
