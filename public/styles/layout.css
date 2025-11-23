@@ -44,6 +44,7 @@ html, body {
 }
 
 #portal-body {
+    width: 100%;
     position: absolute;
     top: 45.5px;
     padding-bottom: 45px;
@@ -160,6 +161,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 2.2rem;
+        --mySidebar-width: 48.6%;
     }
 
     .container,
@@ -185,12 +187,9 @@ html, body {
         padding: 2.2rem;
     }
 
-    .sidepanel {
-        width: 0;
-    }
-
-    #portal-main {
-        margin: 0.5rem;
+    .portal-main {
+        margin: 1% 1.5%;
+        width: 97%;
     }
 
     #blog-body {
@@ -248,6 +247,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 2.5rem;
+        --mySidebar-width: 33%;
     }
     
     .container,
@@ -276,12 +276,9 @@ html, body {
         padding: 2.15rem;
     }
 
-    .sidepanel {
-        width: 0;
-    }
-
-    #portal-main {
-        margin: 0.5rem;
+    .portal-main {
+        margin: 1% 1.5%;
+        width: 97%;
     }
 
     #blogs-footer {
@@ -326,6 +323,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 2.5rem;
+        --mySidebar-width: 25.2%;
     }
 
     .container,
@@ -354,12 +352,9 @@ html, body {
         padding: 2.15rem;
     }
 
-    .sidepanel {
-        width: 0;
-    }
-
-    #portal-main {
-        margin: 0.5rem;
+    .portal-main {
+        margin: 0.5% 1%;
+        width: 98%;
     }
 
     .author {
@@ -409,6 +404,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 2.5rem;
+        --mySidebar-width: 20%;
     }
 
     .container,
@@ -437,12 +433,9 @@ html, body {
         padding: 2.15rem;
     }
 
-    .sidepanel {
-        width: 0;
-    }
-
-    #portal-main {
-        margin: 0.5rem;
+    .portal-main {
+        margin: 0.5% 1%;
+        width: 98%;
     }
 
     .author {
@@ -489,6 +482,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 5.8rem;
+        --mySidebar-width: 17%;
     }
 
     .container,
@@ -515,6 +509,19 @@ html, body {
 
     #portal-header {
         padding: 2.1rem;
+    }
+
+    .my-sidebar {
+        width: var(--mySidebar-width);
+        z-index: 0;
+    }
+
+    .portal-main {
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        margin-left: calc(var(--mySidebar-width) + 0.5%);
+        width: calc(99% - var(--mySidebar-width));
     }
 
     #better-way .home-cols {
@@ -563,6 +570,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 5.8rem;
+        --mySidebar-width: 14.5%;
     }
 
     .container,
@@ -595,6 +603,20 @@ html, body {
         padding: 1.75rem;
     }
 
+    .my-sidebar {
+        width: var(--mySidebar-width);
+        z-index: 0;
+        margin-top: 40px;
+    }
+
+    .portal-main {
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        margin-left: calc(var(--mySidebar-width) + 0.5%);
+        width: calc(99% - var(--mySidebar-width));
+    }
+
     .sidepanel {
         margin-top: 40px;
     }
@@ -623,6 +645,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 5.8rem;
+        --mySidebar-width: 13%;
     }
 
     .container,
@@ -655,8 +678,18 @@ html, body {
         padding: 1.75rem;
     }
 
-    .sidepanel {
+    .my-sidebar {
+        width: var(--mySidebar-width);
+        z-index: 0;
         margin-top: 40px;
+    }
+
+    .portal-main {
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        margin-left: calc(var(--mySidebar-width) + 0.5%);
+        width: calc(99% - var(--mySidebar-width));
     }
 
     .nav-item #sub-button {
@@ -675,6 +708,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 5.8rem;
+        --mySidebar-width: 11.6%;
     }
 
     .container,
@@ -703,6 +737,20 @@ html, body {
         margin: 0.45rem 0 0 0 !important;
     }
 
+    .my-sidebar {
+        width: var(--mySidebar-width);
+        z-index: 0;
+        margin-top: 40px;
+    }
+
+    .portal-main {
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        margin-left: calc(var(--mySidebar-width) + 0.5%);
+        width: calc(99% - var(--mySidebar-width));
+    }
+
     .sidepanel {
         margin-top: 40px;
     }
@@ -723,6 +771,7 @@ html, body {
 
     :root {
         --body-padding-bottom: 5.8rem;
+        --mySidebar-width: 9%;
     }
 
     .container,
@@ -753,6 +802,20 @@ html, body {
 
     .menu-margin {
         margin: 0.5rem 0 0 0 !important;
+    }
+
+    .my-sidebar {
+        width: var(--mySidebar-width);
+        z-index: 0;
+        margin-top: 40px;
+    }
+
+    .portal-main {
+        margin-top: 0.5%;
+        margin-right: 0.5%;
+        margin-bottom: 0.5%;
+        margin-left: calc(var(--mySidebar-width) + 0.5%);
+        width: calc(99% - var(--mySidebar-width));
     }
 
     .sidepanel {
