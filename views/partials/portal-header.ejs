@@ -44,9 +44,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mb-md-0 me-auto">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/focus">This Blog</a>
-                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="/user-portal/questions">
                                    <i class="bi bi-bell" style="color: #008c8c; font-size: 1.2rem;"></i><span class=" hide-sm"> Questions</span>
@@ -72,9 +69,6 @@
                                    <i class="bi bi-person-square" style="color: #008c8c; font-size: 1.2rem;"></i><span class="hide-sm"> Full Name</span>
                                 </a>
                             </li>
-                            <!-- <li class="nav-item hide-s-xl">
-                                <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -82,8 +76,8 @@
         </div>
         <div id="portal-body">
             <section id="user-portal" class="portal-container">
-                <div id="mySidepanel" class="sidepanel bg-dark">
-                    <a href="javascript:void(0)" class="closebtn button vsmall-text white-text" onclick="closeNav()">Close</a>
+                <div id="mySidebar" class="my-sidebar bg-dark">
+                    <button id="closeBtn" class="close-btn button vsmall-text white-text">Close</button>
                     <div id="portal-nav" class="large-tbm">
                         <a href="/user-portal/dashboard" class="xtiny-tbm">
                             <i class="bi bi-columns-gap" style="color: #ffffff; font-size: 1.2rem;"></i>  Dashboard
@@ -92,7 +86,7 @@
                             <i class="bi bi-file-text" style="color: #ffffff; font-size: 1.2rem;"></i> Articles
                         </a>
                         <a href="/user-portal/blog-posts" class="xtiny-tbm">
-                            <i class="bi bi-journal-text" style="color: #ffffff; font-size: 1.2rem;"></i> Blogs Posts
+                            <i class="bi bi-journal-text" style="color: #ffffff; font-size: 1.2rem;"></i> Blog Posts
                         </a>
                         <a href="/user-portal/all-questions" class="xtiny-tbm">
                             <i class="bi bi-question-circle" style="color: #ffffff; font-size: 1.2rem;"></i> All Questions
@@ -113,8 +107,6 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <button class="openbtn vtiny-tbm button-green bg-dark vsmall-text white-text" onclick="openNav()">Open</button>
-                    <div id="portal-main">
-                        <p>Content...&#9776; &times;</p>
+                <div id="userPortalMain" class="user-portal-main">
+                                        
         
