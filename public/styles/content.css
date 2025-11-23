@@ -436,20 +436,21 @@ ul .nav-item {
 
 /* COLLAPSIBLE SIDEBAR */
 
-.sidepanel {
-  height: 100%;
-  width: 14.5rem;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  margin-top: 45px;
-  padding-top: 3rem;
-  transition: 0.5s;
+.my-sidebar {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s ease;
+    z-index: 1;
+    margin-top: 45px;
+    padding-top: 3rem;
+    white-space: nowrap;
 }
 
-.sidepanel a {
+.my-sidebar a {
   padding: 0.35rem 2rem;
   margin: 0.2rem 0.5rem;
   text-decoration: none;
@@ -460,27 +461,32 @@ ul .nav-item {
   transition: 0.5s;
 }
 
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
-
-.sidepanel .closebtn {
+.my-sidebar .close-btn {
   position: absolute;
   top: 0;
-  right: 0.25rem;
-  padding: 0.3rem 0.75rem !important;
+  right: 0.5rem;
+  padding: 0.15rem 0.75rem !important;
   margin-top: 1rem;
   margin-left: auto;
 }
 
-.openbtn {
+.portal-main {
+    transition: margin 0.5s ease, width 0.5s ease;
+    padding: 0.3rem 0.7rem;
+    background-color: #ffffff;
+    border: 0.5px solid #dedede;
+    border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 1.5px #dedede;
+}
+
+.open-btn {
   cursor: pointer;
   margin-left: 0.5rem;
   padding: 0.15rem 0.8rem;
   border-radius: 0.8rem;
 }
 
-.openbtn:hover {
+.open-btn:hover {
   background-color: #444;
 }
 
@@ -495,15 +501,44 @@ ul .nav-item {
 
 .portal-container {
     display: flex;
+    width: 100%;
+}
+
+.user-portal-main {
+    width: 100%;
 }
 
 #portal-main {
+    width: 84.5%;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: margin-left .5s;
-    margin: 0.5rem 0.5rem 0.5rem 15.5rem;
+    margin: 0.5% 1% 0.5% 14.5%;
+    padding: 0.3rem 0.7rem;
+    background-color: #ffffff;
+    border: 0.5px solid #dedede;
+    border-radius: 1rem;
+    box-shadow: 0.5px 0.5px 1.5px #dedede;
+}
+
+.crumbs-area {
+    width: 99%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto 2fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.mx-auto {
+    margin: 0 auto !important;
+}
+
+.no-wrap {
+    text-wrap: nowrap;
 }
 
 /* END OF PORTAL CONTAINER */
