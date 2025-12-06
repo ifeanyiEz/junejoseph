@@ -332,6 +332,15 @@ html, body {
         display: none;
     }
 
+    /* Dashboard */
+
+    .dash-summary {
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* End Dashboard */
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -413,6 +422,16 @@ html, body {
     .hide-sm-xl, .hide-s-xl {
         display: none;
     }
+
+    /* Dashboard */
+
+    .dash-summary {
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* End Dashboard */
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
