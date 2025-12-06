@@ -240,7 +240,16 @@ html, body {
     .hide-sm {
         display: none;
     }
-    
+
+    /* Dashboard */
+
+    .dash-summary {
+        gap: 1rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    /* End Dashboard */
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
