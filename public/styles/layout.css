@@ -311,6 +311,12 @@ html, body {
         padding: 0.16rem 2rem;
     }
 
+    .crumbs-area {
+        gap: 1rem;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+    }
+
     .hide-sm-xl, 
     .hide-s-xl,
     .hide-sm {
@@ -513,7 +519,7 @@ html, body {
 
     .my-sidebar {
         width: var(--mySidebar-width);
-        z-index: 0;
+        z-index: 1;
     }
 
     .portal-main {
@@ -605,7 +611,7 @@ html, body {
 
     .my-sidebar {
         width: var(--mySidebar-width);
-        z-index: 0;
+        z-index: 1;
         margin-top: 40px;
     }
 
@@ -680,7 +686,7 @@ html, body {
 
     .my-sidebar {
         width: var(--mySidebar-width);
-        z-index: 0;
+        z-index: 1;
         margin-top: 40px;
     }
 
@@ -739,7 +745,7 @@ html, body {
 
     .my-sidebar {
         width: var(--mySidebar-width);
-        z-index: 0;
+        z-index: 1;
         margin-top: 40px;
     }
 
@@ -806,7 +812,7 @@ html, body {
 
     .my-sidebar {
         width: var(--mySidebar-width);
-        z-index: 0;
+        z-index: 1;
         margin-top: 40px;
     }
 
