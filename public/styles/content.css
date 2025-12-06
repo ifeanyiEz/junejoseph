@@ -485,10 +485,6 @@ ul .nav-item {
 .portal-main {
     transition: margin 0.5s ease, width 0.5s ease;
     padding: 0.3rem 0.7rem;
-    /* background-color: #ffffff;
-    border: 0.5px solid #dedede;
-    border-radius: 1rem;
-    box-shadow: 0.5px 0.5px 1.5px #dedede; */
 }
 
 .open-btn {
@@ -580,7 +576,6 @@ ul .nav-item {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     border-radius: 5px;
-    border: 0.5px solid #dedede;
 }
 
 .dash-info {
@@ -590,7 +585,7 @@ ul .nav-item {
     padding: 0.7rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: #fdd046;
+    background-color: #ffdd75;
 }
 
 .dash-link {
@@ -604,6 +599,10 @@ ul .nav-item {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
+}
+
+.dash-link a:hover {
+    font-size: 1.05rem;
 }
 
 /* END DASHBOARD CONTENT */
