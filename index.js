@@ -127,6 +127,36 @@ app.route("/user-portal/dashboard")
         res.render("dashboard.ejs");
     })
 
+app.route("/user-portal/articles")
+    .get((req, res) => {
+        res.render("articles.ejs");
+    })
+
+app.route("/user-portal/blog-posts")
+    .get((req, res) => {
+        res.render("blog-posts.ejs");
+    })
+
+app.route("/user-portal/all-questions")
+    .get((req, res) => {
+        res.render("all-questions.ejs");
+    })
+
+app.route("/user-portal/my-questions")
+    .get((req, res) => {
+        res.render("my-questions.ejs");
+    })
+
+app.route("/user-portal/subscriptions")
+    .get((req, res) => {
+        res.render("subscriptions.ejs");
+    })
+
+app.route("/user-portal/users")
+    .get((req, res) => {
+        res.render("users.ejs");
+    })
+
 app.route("/signup")
     .get((req, res) => {
         res.render("signup.ejs");
