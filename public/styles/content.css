@@ -434,6 +434,20 @@ ul .nav-item {
     list-style: none;
 }
 
+/* User Portal */
+
+.top-icon {
+    font-size: 1.2rem;
+    margin-right: 0.2rem;
+}
+
+.side-icon {
+    font-size: 1.2rem; 
+    margin-right: 0.75rem;
+}
+
+/* End of User Portal */
+
 /* COLLAPSIBLE SIDEBAR */
 
 .my-sidebar {
@@ -469,6 +483,11 @@ ul .nav-item {
 }
 
 .my-sidebar a:focus {
+    color: #008c8c;
+    background-color: #f8f5fe;
+}
+
+.my-sidebar a.active {
     color: #008c8c;
     background-color: #f8f5fe;
 }
