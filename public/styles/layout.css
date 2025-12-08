@@ -250,6 +250,14 @@ html, body {
     }
 
     /* End Dashboard */
+
+    /* Portal Articles */
+    .articles-summary {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+    /* End Portal Articles */
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -341,6 +349,14 @@ html, body {
     }
 
     /* End Dashboard */
+
+    /* Portal Articles */
+    .articles-summary {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    /* End Portal Articles */
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -432,6 +448,14 @@ html, body {
     }
 
     /* End Dashboard */
+
+    /* Portal Articles */
+    .articles-summary {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    /* End Portal Articles */
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -510,6 +534,13 @@ html, body {
         padding: 0.16rem 2rem;
     }
 
+    /* Portal Articles */
+    .articles-summary {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    /* End Portal Articles */
 }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
@@ -598,6 +629,14 @@ html, body {
     .hide-s-xl {
         display: none;
     }
+
+    /* Portal Articles */
+    .articles-summary {
+        gap: 0.25rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    /* End Portal Articles */
 }
 
 @media (min-width: 1441px) and (max-width: 1680px) {
