@@ -261,6 +261,10 @@
     margin-bottom: 3rem !important;
 }
 
+.no-padding {
+    padding: 0 !important;
+}
+
 .no-bm {
     margin: 0 !important;
 }
@@ -615,11 +619,9 @@ ul .nav-item {
     transform: scale(1.025);
 }
 
-.b-icon {
+.dash-icon {
     color: #f86503a8;
-    /* color: #008c8c; */
     font-size: 4rem;
-    font-weight: bolder;
 }
 
 .dash-link {
@@ -642,3 +644,41 @@ ul .nav-item {
 }
 
 /* END DASHBOARD CONTENT */
+
+/* PORTAL ARTICLES */
+
+.articles-summary {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.metric-block {
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    grid-template-rows: auto;
+    /* padding: 2px; */
+    border: 1px solid #dedede;
+    border-radius: 5px;
+}
+
+.metric-info {
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.metric-icon {
+    border-radius: 3px;
+    background-color: #f86503a8;
+}
+
+.m-icon {
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1.8;
+}
+
+/* END PORTAL ARTICLES */
