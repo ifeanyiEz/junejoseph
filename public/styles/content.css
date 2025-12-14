@@ -704,10 +704,11 @@ ul .nav-item {
     grid-template-columns: 1.5fr auto;
     grid-template-rows: auto;
     padding: 3px 8px;
-    border: 1px solid #cecece;
+    /* border: 1px solid #cecece; */
     border-radius: 5px;
     align-items: center;
-    background-color: #efefef;
+    background-color: #e8e8e8;
+    box-shadow: 1px 1px 1px #008c8ca2;
 }
 
 .action-block-new {
@@ -715,10 +716,11 @@ ul .nav-item {
     grid-template-columns: 1.5fr auto;
     grid-template-rows: auto;
     padding: 3px 8px;
-    border: 1px solid #f86503a8;
+    /* border: 1px solid #f86503a8; */
     border-radius: 5px;
     align-items: center;
     background-color: #f86503;
+    box-shadow: 1px 1px 1px #008c8ca2;
 }
 
 .action-icon-new {
