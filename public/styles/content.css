@@ -708,7 +708,7 @@ ul .nav-item {
     border-radius: 5px;
     align-items: center;
     background-color: #e8e8e8;
-    box-shadow: 1px 1px 1px #008c8ca2;
+    box-shadow: 1px 1px 1px #008c8c;
 }
 
 .action-block-new {
@@ -720,7 +720,7 @@ ul .nav-item {
     border-radius: 5px;
     align-items: center;
     background-color: #f86503;
-    box-shadow: 1px 1px 1px #008c8ca2;
+    box-shadow: 1px 1px 1px #008c8c;
 }
 
 .action-icon-new {
