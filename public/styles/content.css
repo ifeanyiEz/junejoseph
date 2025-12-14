@@ -608,9 +608,9 @@ ul .nav-item {
     padding: 0.7rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    border-top: 0.5px solid #dedede;
-    border-right: 0.5px solid #dedede;
-    border-left: 0.5px solid #dedede;
+    border-top: 0.5px solid #bebebe;
+    border-right: 0.5px solid #bebebe;
+    border-left: 0.5px solid #bebebe;
     /* background-color: #ffdd75; */
     transition: transform 0.3s ease;
 }
@@ -658,8 +658,8 @@ ul .nav-item {
     display: grid;
     grid-template-columns: 4fr 1.5fr;
     grid-template-rows: auto;
-    /* padding: 2px; */
-    border: 1px solid #dedede;
+    padding: 2px;
+    border: 1px solid #cecece;
     border-radius: 5px;
 }
 
@@ -679,6 +679,78 @@ ul .nav-item {
     color: #ffffff;
     font-size: 2rem;
     line-height: 1.8;
+}
+
+.portal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.actions-left {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: row;
+}
+
+.actions-right {
+    display: flex;
+    gap: 0.25rem;
+    flex-direction: row-reverse;
+}
+
+.action-block {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 8px;
+    border: 0.5px solid #dfdfdf;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #efefef;
+}
+
+.action-block-new {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 8px;
+    border: 1px solid #f86503a8;
+    border-radius: 5px;
+    align-items: center;
+    background-color: #f86503;
+}
+
+.action-icon-new {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.25px 3px;
+}
+
+.action-icon-new::before {
+    font-weight: 900 !important;
+}
+
+.action-icon-new::after {
+    font-weight: 900 !important;
+}
+
+.action-icon {
+    color: #f86503a8;
+    font-size: 1rem;
+    padding: 0.25px 3px;
+}
+
+.action-icon::before {
+    font-weight: 900 !important;
+}
+
+.action-icon::after {
+    font-weight: 900 !important;
+}
+
+.action-name {
+    margin: 0 0.25rem;
 }
 
 /* END PORTAL ARTICLES */
