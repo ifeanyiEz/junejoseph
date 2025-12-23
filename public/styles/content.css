@@ -610,8 +610,9 @@ ul .nav-item {
     border-top-right-radius: 5px;
     border-top: 0.5px solid #bebebe;
     border-right: 0.5px solid #bebebe;
+    border-bottom: 0.5px solid #bebebe;
     border-left: 0.5px solid #bebebe;
-    /* background-color: #ffdd75; */
+    background-color: #ffffff;
     transition: transform 0.3s ease;
 }
 
@@ -628,7 +629,6 @@ ul .nav-item {
     padding: 2.5px 2.5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    /* background-color: #e6ad06; */
     background-color: #008c8ca2;
 }
 
@@ -649,7 +649,7 @@ ul .nav-item {
 
 .articles-summary {
     display: grid;
-    gap: 0.25rem;
+    gap: 0.5rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
 }
@@ -659,8 +659,12 @@ ul .nav-item {
     grid-template-columns: 4fr 1.5fr;
     grid-template-rows: auto;
     padding: 2px;
-    border: 1px solid #cecece;
+    border-top: 1px solid #cecece;
+    border-right: 1px solid #cecece;
+    border-bottom: 4px solid #008c8ca2;
+    border-left: 1px solid #cecece;
     border-radius: 5px;
+    background-color: #ffffff;
 }
 
 .metric-info {
@@ -672,11 +676,12 @@ ul .nav-item {
 
 .metric-icon {
     border-radius: 3px;
-    background-color: #008c8ca2;
+    /* background-color: #008c8ca2; */
 }
 
 .m-icon {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #f86503a8;
     font-size: 2rem;
     line-height: 1.8;
 }
@@ -689,13 +694,13 @@ ul .nav-item {
 
 .actions-left {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.5rem;
     flex-direction: row;
 }
 
 .actions-right {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.5rem;
     flex-direction: row-reverse;
 }
 
@@ -708,7 +713,7 @@ ul .nav-item {
     border-radius: 5px;
     align-items: center;
     background-color: #e8e8e8;
-    box-shadow: 1px 1px 1px #008c8c;
+    box-shadow: 0.5px 0.5px 0.5px #008c8c;
 }
 
 .action-block-new {
@@ -720,7 +725,7 @@ ul .nav-item {
     border-radius: 5px;
     align-items: center;
     background-color: #f86503;
-    box-shadow: 1px 1px 1px #008c8c;
+    box-shadow: 0.5px 0.5px 0.5px #008c8c;
 }
 
 .action-icon-new {
@@ -738,7 +743,7 @@ ul .nav-item {
 }
 
 .action-icon {
-    color: #f86503a8;
+    /* color: #f86503a8; */
     font-size: 1rem;
     padding: 0.25px 3px;
 }
