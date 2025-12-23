@@ -253,7 +253,6 @@ html, body {
 
     /* Portal Articles */
     .articles-summary {
-        gap: 0.25rem;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
@@ -352,7 +351,6 @@ html, body {
 
     /* Portal Articles */
     .articles-summary {
-        gap: 0.25rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
@@ -451,7 +449,6 @@ html, body {
 
     /* Portal Articles */
     .articles-summary {
-        gap: 0.25rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
@@ -536,7 +533,6 @@ html, body {
 
     /* Portal Articles */
     .articles-summary {
-        gap: 0.25rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
@@ -632,7 +628,6 @@ html, body {
 
     /* Portal Articles */
     .articles-summary {
-        gap: 0.25rem;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
