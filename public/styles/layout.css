@@ -257,6 +257,15 @@ html, body {
         grid-template-rows: auto auto auto;
     }
     /* End Portal Articles */
+
+    /* Portal Questions */
+
+    .questions-summary {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    /* End Portal Questions */
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -355,6 +364,15 @@ html, body {
         grid-template-rows: auto auto;
     }
     /* End Portal Articles */
+
+    /* Portal Questions */
+
+    .questions-summary {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+
+    /* End Portal Questions */
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -453,6 +471,15 @@ html, body {
         grid-template-rows: auto auto;
     }
     /* End Portal Articles */
+
+    /* Portal Questions */
+
+    .questions-summary {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* End Portal Questions */
 }
 
 @media (min-width: 993px) and (max-width: 1200px) {
@@ -537,6 +564,15 @@ html, body {
         grid-template-rows: auto auto;
     }
     /* End Portal Articles */
+
+    /* Portal Questions */
+
+    .questions-summary {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* End Portal Questions */
 }
 
 @media (min-width: 1201px) and (max-width: 1440px) {
@@ -632,6 +668,15 @@ html, body {
         grid-template-rows: auto auto;
     }
     /* End Portal Articles */
+
+    /* Portal Questions */
+
+    .questions-summary {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    /* End Portal Questions */
 }
 
 @media (min-width: 1441px) and (max-width: 1680px) {
