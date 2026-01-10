@@ -6,7 +6,133 @@
     <p id="p-crumbs" class="hide-sm small-text no-wrap right-text">bread crumbs/bread crumbs/more crumbs</p>
 </div>
 
-
-
+<div id="portalMain" class="portal-main">
+    <h5 class="section-title vbold-text vtiny-tbm">My Questions</h5>
+    <div id="articlesContent" class="dash-content">
+        <section id="articlesTopline" class="questions-summary">
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">50</h5>
+                    <p class="small-text no-padding xtiny-tbm bold-text">Questions Asked</p>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-question-circle m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">23</h5>
+                    <p class="small-text no-padding xtiny-tbm bold-text">Based on Content</p>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-plugin m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">25</h5>
+                    <p class="small-text no-padding xtiny-tbm bold-text">In Info Bank</p>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-people m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">58</h5>
+                    <p class="small-text no-padding xtiny-tbm bold-text">Average Reactions</p>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-chat-heart m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">5</h5>
+                    <form action="" method="" class="form-group">
+                        <select name="question-frequency" id="question-frequency" class="small-text no-padding xtiny-tbm bold-text no-border bg-whiter top-width">
+                            <option value="today">Asked Today</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                            <option value="last-3-months">Last 3 Months</option>
+                            <option value="last-6-months">Last 6 Months</option>
+                            <option value="this-year">This Year</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-calendar-date m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">33</h5>
+                    <form action="" method="" class="form-group">
+                        <select name="question-priority" id="question-priority" class="small-text no-padding xtiny-tbm bold-text no-border bg-whiter top-width">
+                            <option value="critical">Critical Priority</option>
+                            <option value="urgent">Urgent Priority</option>
+                            <option value="high">High Priority</option>
+                            <option value="medium">Medium Priority</option>
+                            <option value="low">Low Priority</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-stopwatch m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">8</h5>
+                    <form action="" method="" class="form-group">
+                        <select name="question-priority" id="question-priority" class="small-text no-padding xtiny-tbm bold-text no-border bg-whiter top-width">
+                            <option value="unread">Unread Questions</option>
+                            <option value="read">Read Questions</option>
+                            <option value="active">Active Questions</option>
+                            <option value="inactive">Inactive Questions</option>
+                            <option value="closed">Closed Questions</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-eye m-icon"></i>
+                </div>
+            </div>
+            <div class="metric-block">
+                <div class="metric-info">
+                    <h5 class="xbold-text no-bm">89.2%</h5>
+                    <p class="small-text no-padding xtiny-tbm bold-text">Response-Ask Ratio</p>
+                </div>
+                <div class="metric-icon centered-text">
+                    <i class="bi bi-pie-chart m-icon"></i>
+                </div>
+            </div>
+        </section>
+        <section id="questionsActions" class="portal-actions">
+            <div id="questionsLeft" class="actions-left">
+                <button class="action-block no-border">
+                    <i class="bi bi-arrow-down-up action-icon"></i>
+                    <p class="action-name bold-text small-text no-padding hide-sm">Sort</p>
+                </button>
+                <button class="action-block no-border">
+                    <i class="bi bi-funnel action-icon"></i>
+                    <p class="action-name bold-text small-text no-padding hide-sm">Filter</p>
+                </button>
+                <button class="action-block no-border">
+                    <i class="bi bi-search action-icon"></i>
+                    <form action="" method="" class="form-group">
+                        <input type="text" class="form-control small-text no-padding action-name" name="search" id="articleSearch" placeholder="  Search">
+                    </form>
+                </button>
+            </div>
+            <div id="questionsRight" class="actions-right">
+                <button class="action-block-new no-border">
+                    <i class="bi bi-plus-lg action-icon-new"></i>
+                    <p class="action-name bold-text small-text no-padding white-text hide-sm">New Question</p>
+                </button>
+            </div>
+        </section>
+    </div>
+</div>
 
 <%- include("partials/portal-footer.ejs") %>
