@@ -21,7 +21,16 @@
             <div class="metric-block">
                 <div class="metric-info">
                     <h5 class="xbold-text no-bm">13</h5>
-                    <p class="small-text no-padding xtiny-tbm bold-text">Written per Month</p>
+                    <form action="" method="" class="form-group">
+                        <select name="post-frequency" id="post-frequency" class="small-text no-padding xtiny-tbm bold-text no-border bg-whiter top-width">
+                            <option value="today">Written Today</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                            <option value="last-3-months">Last 3 Months</option>
+                            <option value="last-6-months">Last 6 Months</option>
+                            <option value="this-year">This Year</option>
+                        </select>
+                    </form>
                 </div>
                 <div class="metric-icon centered-text">
                     <i class="bi bi-calendar-check m-icon"></i>
@@ -85,6 +94,10 @@
                 <button class="action-block-new no-border">
                     <i class="bi bi-plus-lg action-icon-new"></i>
                     <p class="action-name bold-text small-text no-padding white-text hide-sm">New Post</p>
+                </button>
+                <button id="delete-post" class="action-block no-border">
+                    <i class="bi bi-trash3 action-icon"></i>
+                    <p class="action-name vbold-text small-text no-padding hide-sm">Delete</p>
                 </button>
             </div>
         </section>
