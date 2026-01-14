@@ -5,11 +5,11 @@
 }
 
 .navbar {
-    border-bottom: 1px solid #008000;
+    border-bottom: 1px solid #008c8c;
 }
 
 .border-top {
-    border-top: 1px solid #008000 !important;
+    border-top: 1px solid #008c8c !important;
 }
 
 .no-border {
@@ -545,6 +545,8 @@ ul .nav-item {
 
 .user-portal-main {
     width: 100%;
+    position: absolute;
+    top: 45px;
 }
 
 #portal-main {
@@ -733,11 +735,65 @@ ul .nav-item {
     grid-template-columns: 1.5fr auto;
     grid-template-rows: auto;
     padding: 3px 8px;
-    /* border: 0.5px solid #f86503a8; */
     border-radius: 5px;
     align-items: center;
     background-color: #f86503;
     box-shadow: 1px 1px 1px #008c8c;
+}
+
+.action-block-draft {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 15px;
+    border: 1.2px solid #008c8c;
+    border-radius: 1rem;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.action-block-draftnew {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 15px;
+    border-radius: 1rem;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.action-block-publish {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 15px;
+    border-radius: 1rem;
+    align-items: center;
+    background-color: #008c8c;
+}
+
+.action-block-cancel {
+    display: grid;
+    grid-template-columns: 1.5fr auto;
+    grid-template-rows: auto;
+    padding: 3px 15px;
+    border-radius: 1rem;
+    align-items: center;
+    background-color: #f86503;
+}
+
+.action-icon-draft {
+    color: #008c8c;
+    font-size: 1rem;
+    padding: 0.25px 3px;
+}
+
+.action-icon-draft::before {
+    font-weight: 900 !important;
+}
+
+.action-icon-draft::after {
+    font-weight: 900 !important;
 }
 
 .action-icon-new {
@@ -755,7 +811,6 @@ ul .nav-item {
 }
 
 .action-icon {
-    /* color: #f86503a8; */
     font-size: 1rem;
     padding: 0.25px 3px;
 }
@@ -773,6 +828,45 @@ ul .nav-item {
 }
 
 /* END PORTAL ARTICLES */
+
+/* PORTAL BLOG POSTS */
+
+.main-post {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.form-section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+}
+
+.form-bottom {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.form-buttons {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.ql-container {
+    font-family: "Raleway", sans-serif !important;
+    min-height: 20vh !important;
+    margin: 0 0 0.75rem 0 !important;
+    position: relative;
+}
+
+/* END PORTAL BLOG POSTS */
 
 /* PORTAL QUESTIONS */
 
