@@ -1,7 +1,7 @@
 <%- include("partials/portal-header.ejs") %>
 
 <div class="crumbs-area">
-    <button id="openBtn" class="open-btn vtiny-tbm button-green bg-dark vsmall-text white-text">Open</button>
+    <button id="openBtn" class="open-btn vtiny-tbm button-green bg-dark small-text white-text">Open</button>
     <!-- <h6 id="greetings" class="bold-text mx-auto no-wrap">Welcome back Ifeanyi Ezugworie</h6> -->
     <p id="p-crumbs" class="small-text no-wrap right-text">bread crumbs/bread crumbs/more crumbs</p>
 </div>
@@ -91,7 +91,7 @@
                 </button>
             </div>
             <div id="blogsRight" class="actions-right">
-                <button class="action-block-new no-border">
+                <button id="write-post" class="action-block-new no-border">
                     <i class="bi bi-plus-lg action-icon-new"></i>
                     <p class="action-name bold-text small-text no-padding white-text hide-sm">New Post</p>
                 </button>
@@ -101,7 +101,102 @@
                 </button>
             </div>
         </section>
+        <div id="blogPost-form" class="large-bm hidden-form">
+            <div class="right-text">
+                <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
+            </div>
+            <div class="mainPost-form">
+                <form id="create-post" class="form-body" action="">
+                    <h4 class="green-text vbold-text centered-text">Write a New Blog Post</h4>
+                    <hr class="large-bm">
+                    <div class="main-post">
+                        <div class="form-section">
+                            <div id="blogTitle" class="form-group vtiny-bm">
+                                <label for="blog-title" class="form-label green-text vbold-text xtiny-bm">Title</label>
+                                <input type="text" class="form-control regular-text" name="blog-title" id="blog-title"
+                                    placeholder="The topic you want to discuss" value="" required>
+                            </div>
+                            <div id="blogCategory" class="form-group vtiny-bm">
+                                <label for="blog-category" class="form-label green-text vbold-text xtiny-bm">Category</label>
+                                <select name="blog-category" id="blog-category" class="form-select regular-text">
+                                    <option value="none-selected">Select a category</option>
+                                    <option value="category-1">Category 1</option>
+                                    <option value="category-2">Category 2</option>
+                                    <option value="category-3">Category 3</option>
+                                    <option value="category-4">Category 4</option>
+                                    <option value="category-5">Category 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <div id="blogSubcategory" class="form-group vtiny-bm">
+                                <label for="sub-category" class="form-label green-text vbold-text xtiny-bm">Sub-category</label>
+                                <select name="sub-category" id="sub-category" class="form-select regular-text">
+                                    <option value="none-selected">Select a sub-category</option>
+                                    <option value="sub-category-1">Sub-category 1</option>
+                                    <option value="sub-category-2">Sub-category 2</option>
+                                    <option value="sub-category-3">Sub-category 3</option>
+                                    <option value="sub-category-4">Sub-category 4</option>
+                                    <option value="sub-category-5">Sub-category 5</option>
+                                </select>
+                            </div>
+                            <div id="blogHero-image" class="form-group vtiny-bm">
+                                <label for="blog-heroImage" class="form-label green-text vbold-text xtiny-bm">Hero Image URL</label>
+                                <input type="text" class="form-control regular-text" name="blog-heroImage" id="log-heroImage"
+                                    placeholder="The address of your blog hero image" required>
+                            </div>
+                        </div>
+                        <div id="blogContent" class="form-group xtiny-bm">
+                            <label for="blogBody" class="form-label green-text vbold-text xtiny-bm">Content</label>
+                        </div>
+                        <div id="blogBody" class="form-control tiny-bm" name="blogBody"></div>
+                        <hr class="large-bm">
+                        <div class="form-bottom">
+                            <div id="blogDate" class="form-group vtiny-bm">
+                                <label for="createDate" class="form-label green-text vbold-text xtiny-bm">Date Written</label>
+                                <input type="text" class="form-control regular-text" name="createDate" id="createDate" value="" readonly>
+                            </div>
+                            <div id="blogTags" class="form-group vtiny-bm">
+                                <label for="tags" class="form-label green-text vbold-text xtiny-bm">Key Words</label>
+                                <input type="text" class="form-control" name="tags" id="tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
+                            </div>
+                        </div>
+                        <div class="form-bottom large-bm">
+                            <div id="blogWriter" class="form-group vtiny-bm">
+                                <label for="writtenBy" class="form-label green-text vbold-text xtiny-bm"> Written By</label>
+                                <input type="text" class="form-control" name="writtenBy" id="writtenBy" value="" readonly>
+                            </div>
+                            <div id="blog-writerEmail" class="form-group vtiny-bm">
+                                <label for="writerEmail" class="form-label green-text vbold-text xtiny-bm">Writer's Email</label>
+                                <input type="text" class="form-control" name="writerEmail" id="writerEmail" value="" readonly>
+                            </div>
+                        </div>
+                        <section id="blogForm-actions" class="form-buttons tiny-bm">
+                            <div id="blogForm-left" class="actions-left">
+                                <button id="cancel-post" class="action-block-cancel no-border">
+                                    <!-- <i class="bi bi-x-circle action-icon-new"></i> -->
+                                    <p class="action-name bold-text small-text white-text no-padding">Cancel</p>
+                                </button>
+                            </div>
+                            <div id="blogForm-right" class="actions-right">
+                                <button id="publish" class="action-block-publish no-border">
+                                    <!-- <i class="bi bi-send action-icon-new"></i> -->
+                                    <p class="action-name bold-text small-text no-padding white-text">Publish Post</p>
+                                </button>
+                                <button id="save-draft" class="action-block-draft ">
+                                    <!-- <i class="bi bi-save action-icon-draft"></i> -->
+                                    <p class="action-name vbold-text small-text no-padding green-text">Save as Draft</p>
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+
+<script src="/js/new-blog-quill.js"></script>
+<script src="/js/new-blogpost.js"></script>
 
 <%- include("partials/portal-footer.ejs") %>
