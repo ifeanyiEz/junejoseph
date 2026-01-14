@@ -29,6 +29,7 @@ html, body {
 #blogs-container {
     min-height: 100%;
     position: relative;
+    overflow-y: auto;
 }
 
 #blogs-header {
@@ -45,7 +46,6 @@ html, body {
 
 #portal-body {
     width: 100%;
-    position: absolute;
     top: 45.5px;
     padding-bottom: 45px;
 }
@@ -85,9 +85,10 @@ html, body {
 
 #question-form {
     position: fixed;
-    bottom: var(--body-padding-bottom);
+    /* bottom: var(--body-padding-bottom); */
+    top: 45px;
     right: 0.5rem;
-    max-width: 30rem;
+    width: 30rem;
     background-color: #ffffff;
     padding: 1rem;
     border: 1px solid #dedede;
@@ -95,7 +96,26 @@ html, body {
     box-shadow: 2px 2px 20px #d3d3d3;
 }
 
+#blogPost-form {
+    position: fixed;
+    top: 45px;
+    right: 10%;
+    max-height: calc(100vh - 45px);
+    width: 70%;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #dedede;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 20px #d3d3d3;
+}
+
 .main-form {
+    padding: 0.5rem;
+}
+
+.mainPost-form {
     padding: 1rem;
 }
 
@@ -124,7 +144,7 @@ html, body {
 
 #question-tooltip {
     position: absolute;
-    bottom: calc(var(--body-padding-bottom) + 22.5rem);
+    bottom: calc(var(--body-padding-bottom) + 20rem);
     right: 1rem;
     max-width: 25rem;
     border-radius: 0.8rem;
@@ -256,6 +276,25 @@ html, body {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
     }
+
+    .form-section {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .form-bottom {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #blogPost-form {
+        right: 2%;
+        width: 96%;
+        padding: 0.5rem;
+    }
+    
     /* End Portal Articles */
 
     /* Portal Questions */
@@ -263,6 +302,12 @@ html, body {
     .questions-summary {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto;
+    }
+
+    #question-form {
+        right: 2%;
+        width: 96%;
+        padding: 0.5rem;
     }
 
     /* End Portal Questions */
