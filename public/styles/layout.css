@@ -406,10 +406,31 @@ html, body {
     /* End Dashboard */
 
     /* Portal Articles */
+
     .articles-summary {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
+
+    .form-section {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .form-bottom {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #blogPost-form {
+        top: 85px;
+        right: 7.5%;
+        max-height: calc(100dvh - 100px);
+        width: 85%;
+    }
+
     /* End Portal Articles */
 
     /* Portal Questions */
