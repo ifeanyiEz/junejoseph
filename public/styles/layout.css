@@ -85,10 +85,12 @@ html, body {
 
 #question-form {
     position: fixed;
-    /* bottom: var(--body-padding-bottom); */
-    top: 45px;
-    right: 0.5rem;
-    width: 30rem;
+    top: 70px;
+    right: 30%;
+    width: 30%;
+    max-height: calc(100dvh - 70px);
+    overflow-y: auto;
+    z-index: 1;
     background-color: #ffffff;
     padding: 1rem;
     border: 1px solid #dedede;
@@ -98,10 +100,10 @@ html, body {
 
 #blogPost-form {
     position: fixed;
-    top: 45px;
-    right: 10%;
-    max-height: calc(100vh - 45px);
-    width: 70%;
+    top: 70px;
+    right: 15%;
+    max-height: calc(100dvh - 70px);
+    width: 60%;
     overflow-y: auto;
     z-index: 1;
     background-color: #ffffff;
