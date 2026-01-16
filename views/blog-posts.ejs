@@ -162,7 +162,7 @@
                                 <input type="text" class="form-control" name="tags" id="tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
                             </div>
                         </div>
-                        <div class="form-bottom large-bm">
+                        <div class="form-bottom">
                             <div id="blogWriter" class="form-group vtiny-bm">
                                 <label for="writtenBy" class="form-label green-text vbold-text xtiny-bm"> Written By</label>
                                 <input type="text" class="form-control" name="writtenBy" id="writtenBy" value="" readonly>
@@ -172,6 +172,21 @@
                                 <input type="text" class="form-control" name="writerEmail" id="writerEmail" value="" readonly>
                             </div>
                         </div>
+                        <hr class="large-bm">
+                        <section id="set-featured" class="set-featured large-bm">
+                            <div id="set-as-featured" class="form-group xtiny-bm">
+                                <input type="checkbox" name="featured-blog" id="featured-blog" value="Yes", class="">
+                                <label for="featured-blog" class="form-label green-text vbold-text xtiny-bm">Set post as featured</label>
+                            </div>
+                            <div id="featured-start-date" class="form-group xtiny-bm">
+                                <label for="featured-start" class="form-label green-text vbold-text xtiny-bm">Start Date</label>
+                                <input type="date" name="featured-start" id="featured-start" class="form-control">
+                            </div>
+                            <div id="featured-end-date" class="form-group vtiny-bm">
+                                <label for="featured-end" class="form-label green-text vbold-text xtiny-bm">End Date</label>
+                                <input type="date" name="featured-end" id="featured-end" class="form-control">
+                            </div>
+                        </section>
                         <section id="blogForm-actions" class="form-buttons tiny-bm">
                             <div id="blogForm-left" class="actions-left">
                                 <button id="cancel-post" class="action-block-cancel no-border">
