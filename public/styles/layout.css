@@ -291,6 +291,13 @@ html, body {
         grid-template-rows: auto auto;
     }
 
+    .set-featured {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
     #blogPost-form {
         right: 2%;
         width: 96%;
@@ -424,10 +431,15 @@ html, body {
         grid-template-rows: auto auto;
     }
 
+    .set-featured {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
     #blogPost-form {
-        top: 85px;
         right: 7.5%;
-        max-height: calc(100dvh - 100px);
         width: 85%;
     }
 
@@ -538,6 +550,32 @@ html, body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
+
+    #blogPost-form {
+        top: 45px;
+        right: 15%;
+        width: 70%;
+    }
+
+    .form-section {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .form-bottom {
+        gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .set-featured {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1rem;
+    }
+
     /* End Portal Articles */
 
     /* Portal Questions */
@@ -630,6 +668,16 @@ html, body {
     .articles-summary {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
+    }
+
+    #blogPost-form {
+        top: 45px;
+        right: 20%;
+        width: 60%;
+    }
+
+    .form-bottom {
+        grid-template-columns: 1.5fr 2fr;
     }
     /* End Portal Articles */
 
@@ -735,6 +783,12 @@ html, body {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
+
+    #blogPost-form {
+        top: 45px;
+        right: 20%;
+        width: 50%;
+    }
     /* End Portal Articles */
 
     /* Portal Questions */
@@ -820,6 +874,13 @@ html, body {
     .footer-justify2 {
         justify-content: center;
     }
+
+    #blogPost-form {
+        top: 45px;
+        right: 17.5%;
+        width: 50%;
+    }
+
 }
 
 @media (min-width: 1681px) and (max-width: 1920px) {
@@ -883,6 +944,12 @@ html, body {
         display: none;
     }
 
+    #blogPost-form {
+        top: 45px;
+        right: 20%;
+        width: 45%;
+    }
+
 }
 
 @media (min-width: 1921px) and (max-width: 2200px) {
@@ -944,6 +1011,12 @@ html, body {
     .hide-xs-xl, 
     .hide-s-xl {
         display: none;
+    }
+
+    #blogPost-form {
+        top: 45px;
+        right: 25%;
+        width: 40%;
     }
 
 }
@@ -1011,6 +1084,12 @@ html, body {
     .hide-xs-xl, 
     .hide-s-xl {
         display: none;
+    }
+
+    #blogPost-form {
+        top: 45px;
+        right: 25%;
+        width: 40%;
     }
 
 }
