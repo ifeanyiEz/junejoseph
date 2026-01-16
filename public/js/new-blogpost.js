@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const writePost = document.getElementById('write-post');
+    const closePost = document.getElementById('close-post');
     const writePostForm = document.getElementById('blogPost-form');
 
     if (!writePost || !writePostForm) {
@@ -26,6 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
             hideForm();
         }
     }
+
+    closePost.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideForm();
+    });
 
     writePost.addEventListener('click', (e) => {
         e.stopPropagation();
