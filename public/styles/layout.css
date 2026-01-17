@@ -789,6 +789,12 @@ html, body {
         right: 20%;
         width: 50%;
     }
+
+    .form-bottom {
+        gap: 1rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
+    }
     /* End Portal Articles */
 
     /* Portal Questions */
@@ -879,6 +885,12 @@ html, body {
         top: 45px;
         right: 17.5%;
         width: 50%;
+    }
+
+    .form-bottom {
+        gap: 1rem;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto;
     }
 
 }
