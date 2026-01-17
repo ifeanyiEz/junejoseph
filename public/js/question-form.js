@@ -16,28 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     checkbox.addEventListener('change', toggleSelectVisibility);
     toggleSelectVisibility();
 
-    // Tooltip on Hover ---
-    const targetField = document.getElementById('question-checkbox');
-    const tooltip = document.getElementById('question-tooltip');
-
-    function showTooltip() {
-        tooltip.classList.remove('hidden-div');
-    }
-
-    function hideTooltip() {
-        tooltip.classList.add('hidden-div');
-    }
-
-    // Attach listeners to show the tooltip on mouseover (hover in)
-    if (targetField) {
-        targetField.addEventListener('mouseover', showTooltip);
-        
-        targetField.addEventListener('mouseout', hideTooltip);
-
-        // Ensure the tooltip is hidden on load
-        hideTooltip();
-    }
-
     const questionForm = document.getElementById('question-form');
     const closeQuestionButton = document.getElementById('close-question');
     const askQuestionForm = document.getElementById('ask-question');
@@ -58,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("Question form closed.");
     }
 
+    document.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (questionForm.classList.contains('visible-form')) {
+            hideForm();
+        }
+    });
+
     function toggleForm() {
         if (questionForm.classList.contains('hidden-form')) {
             showForm();
@@ -69,7 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleButtonIds.forEach(id => {
         const button = document.getElementById(id);
         if (button) {
-            button.addEventListener('click', toggleForm);
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleForm();
+            });
             console.log(`SUCCESS: Listener attached to button: ${id}`);
         } else {
             // This error will now fire if the element truly isn't in the DOM
@@ -77,8 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 2. Hide Form on Close Button Click (X button on the popup)
-    closeQuestionButton.addEventListener('click', hideForm);
+    // 2. Hide Form on Close Button Click (Close button on the popup)
+    closeQuestionButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideForm();
+    });
+
+    askQuestionForm.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 
     // 3. Form Submission Handling (Remains the same, forces a hide)
     askQuestionForm.addEventListener('submit', function (e) {
