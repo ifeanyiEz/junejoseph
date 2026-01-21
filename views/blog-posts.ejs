@@ -101,12 +101,12 @@
                 </button>
             </div>
         </section>
-        <div id="blogPost-form" class="large-bm hidden-form">
+        <section id="blogPost-form" class="large-bm hidden-form">
             <div class="right-text">
                 <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
             </div>
             <div class="mainPost-form">
-                <form id="create-post" class="form-body" action="">
+                <form id="create-post" class="form-body" action="" method="">
                     <h4 class="green-text vbold-text centered-text">Write a New Blog Post</h4>
                     <p class="no-padding xtiny-tbm bold-text centered-text">Share experiences, motivate your readers, connect and build community</p>
                     <hr class="large-bm">
@@ -143,8 +143,8 @@
                             </div>
                             <div id="blogHero-image" class="form-group vtiny-bm">
                                 <label for="blog-heroImage" class="form-label green-text vbold-text xtiny-bm">Hero Image URL</label>
-                                <input type="text" class="form-control regular-text" name="blog-heroImage" id="log-heroImage"
-                                    placeholder="The address of your blog hero image" required>
+                                <input type="text" class="form-control regular-text" name="blog-heroImage" id="blog-heroImage"
+                                    placeholder="The web address of your blog hero image" required>
                             </div>
                         </div>
                         <div id="blogContent" class="form-group xtiny-bm">
@@ -159,7 +159,7 @@
                             </div>
                             <div id="blogTags" class="form-group vtiny-bm">
                                 <label for="tags" class="form-label green-text vbold-text xtiny-bm">Key Words</label>
-                                <input type="text" class="form-control" name="tags" id="tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
+                                <input type="text" class="form-control" name="blog-tags" id="blog-tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
                             </div>
                         </div>
                         <div class="form-bottom">
@@ -173,7 +173,43 @@
                             </div>
                         </div>
                         <hr class="large-bm">
-                        <section id="set-featured" class="set-featured large-bm">
+                        <div id="source-references">
+                            <p class="no-padding vtiny-bm vbold-text">To reference external material, add your sources here.</p>
+                            <div id="sources-container" class="tiny-tm"></div>
+                            <div id="source-item" class="hidden-div">
+                                <div class="form-section">
+                                    <div id="source-author" class="form-group vtiny-bm">
+                                        <label for="referenced-author" class="form-label green-text vbold-text xtiny-bm">Source Author(s)</label>
+                                        <input type="text" class="form-control" name="referenced-author" id="breferenced-author" placeholder="Last name and initials. e.g: Smith, J. C. Separate by comas.">
+                                    </div>
+                                    <div id="source-date" class="form-group vtiny-bm">
+                                        <label for="date-published" class="form-label green-text vbold-text xtiny-bm">Date Published</label>
+                                        <input type="text" class="form-control" name="date-published" id="date-published" placeholder="Format: dd/mm/yyyy or yyyy if full date is not available">
+                                    </div>
+                                </div>
+                                <div class="form-section">
+                                    <div id="source-title" class="form-group vtiny-bm">
+                                        <label for="referenced-title" class="form-label green-text vbold-text xtiny-bm">Source Title</label>
+                                        <input type="text" class="form-control" name="referenced-title" id="referenced-title" placeholder="The title of the referenced material">
+                                    </div>
+                                    <div id="source-link" class="form-group vtiny-bm">
+                                        <label for="link-to-source" class="form-label green-text vbold-text xtiny-bm">Source URL</label>
+                                        <input type="text" class="form-control" name="link-to-source" id="link-to-source" placeholder="The web address of the referenced material.">
+                                    </div>
+                                </div>
+                                <div id="blogsRight" class="actions-right">
+                                    <button class="delete-source action-delete-source">
+                                        <p class="action-name vbold-text vsmall-text no-padding">Remove</p>
+                                    </button>
+                                </div>
+                                <hr class="tiny-tbm">
+                            </div>
+                            <div class="vtiny-tbm">
+                                <button id="add-source" type="button" class="button-orange orange-text small-text bold-text">Add Source</button>
+                            </div>
+                        </div>
+                        <hr class="large-bm">
+                        <div id="set-featured" class="set-featured large-bm">
                             <div id="set-as-featured" class="form-group xtiny-bm">
                                 <input type="checkbox" name="featured-blog" id="featured-blog" value="Yes", class="">
                                 <label for="featured-blog" class="form-label green-text vbold-text xtiny-bm">Set post as featured</label>
@@ -186,29 +222,29 @@
                                 <label for="featured-end" class="form-label green-text vbold-text xtiny-bm">End Date</label>
                                 <input type="date" name="featured-end" id="featured-end" class="form-control">
                             </div>
-                        </section>
-                        <section id="blogForm-actions" class="form-buttons tiny-bm">
+                        </div>
+                        <div id="blogForm-actions" class="form-buttons tiny-bm">
                             <div id="blogForm-left" class="actions-left">
-                                <button id="cancel-post" class="action-block-cancel no-border">
+                                <button type="reset" id="cancel-post" class="action-block-cancel no-border">
                                     <!-- <i class="bi bi-x-circle action-icon-new"></i> -->
-                                    <p class="action-name bold-text small-text white-text no-padding">Cancel</p>
+                                    <p class="action-name bold-text white-text no-padding">Cancel</p>
                                 </button>
                             </div>
                             <div id="blogForm-right" class="actions-right">
-                                <button id="publish" class="action-block-publish no-border">
+                                <button type="submit" id="publish" class="action-block-publish no-border">
                                     <!-- <i class="bi bi-send action-icon-new"></i> -->
-                                    <p class="action-name bold-text small-text no-padding white-text">Publish Post</p>
+                                    <p class="action-name bold-text no-padding white-text">Publish Post</p>
                                 </button>
-                                <button id="save-draft" class="action-block-draft ">
+                                <button type="submit" id="save-draft" class="action-block-draft ">
                                     <!-- <i class="bi bi-save action-icon-draft"></i> -->
-                                    <p class="action-name vbold-text small-text no-padding green-text">Save as Draft</p>
+                                    <p class="action-name vbold-text no-padding green-text">Save as Draft</p>
                                 </button>
                             </div>
-                        </section>
+                        </div>
                     </div>
                 </form>
             </div>
-        </div>
+        </section>
     </div>
 </div>
 
