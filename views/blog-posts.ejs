@@ -106,7 +106,7 @@
                 <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
             </div>
             <div class="mainPost-form">
-                <form id="create-post" class="form-body" action="" method="">
+                <form id="create-post" class="form-body" action="" method="POST">
                     <h4 class="green-text vbold-text centered-text">Write a New Blog Post</h4>
                     <p class="no-padding xtiny-tbm bold-text centered-text">Share experiences, motivate your readers, connect and build community</p>
                     <hr class="large-bm">
@@ -151,25 +151,40 @@
                             <label for="blogBody" class="form-label green-text vbold-text xtiny-bm">Content</label>
                         </div>
                         <div id="blogBody" class="form-control tiny-bm" name="blogBody"></div>
-                        <hr class="large-bm">
-                        <div class="form-bottom">
-                            <div id="blogDate" class="form-group vtiny-bm">
-                                <label for="createDate" class="form-label green-text vbold-text xtiny-bm">Date Written</label>
-                                <input type="text" class="form-control regular-text" name="createDate" id="createDate" value="" readonly>
-                            </div>
-                            <div id="blogTags" class="form-group vtiny-bm">
-                                <label for="tags" class="form-label green-text vbold-text xtiny-bm">Key Words</label>
-                                <input type="text" class="form-control" name="blog-tags" id="blog-tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
-                            </div>
+                        
+                        <div id="blogTags" class="form-group vtiny-bm">
+                            <label for="tags" class="form-label green-text vbold-text xtiny-bm">Key Words</label>
+                            <input type="text" class="form-control" name="blog-tags" id="blog-tags" placeholder="Separate entries by comas. Eg: herbal remedy, nutritional supplements, et c.">
                         </div>
-                        <div class="form-bottom">
+                        <hr class="large-bm">
+                        <div class="form-section">
                             <div id="blogWriter" class="form-group vtiny-bm">
                                 <label for="writtenBy" class="form-label green-text vbold-text xtiny-bm"> Written By</label>
                                 <input type="text" class="form-control" name="writtenBy" id="writtenBy" value="" readonly>
                             </div>
+                            <div id="writerTitle" class="form-group vtiny-bm">
+                                <label for="writer-title" class="form-label green-text vbold-text xtiny-bm"> Writer's Title</label>
+                                <input type="text" class="form-control" name="writer-title" id="writer-title" placeholder="How should you be addressed?" required>
+                            </div>
+                        </div>
+                        <div class="form-section">
+                            <div id="specialization" class="form-group vtiny-bm">
+                                <label for="writer-specialty" class="form-label green-text vbold-text xtiny-bm"> Writer's Specialization</label>
+                                <input type="text" class="form-control" name="writer-specialty" id="writer-specialty" placeholder="Level of specialization and field of expertise" required>
+                            </div>
+                            <div id="writerTitle" class="form-group vtiny-bm">
+                                <label for="writer-title" class="form-label green-text vbold-text xtiny-bm"> Writer's Experience</label>
+                                <input type="text" class="form-control" name="writer-title" id="writer-title" placeholder="Length of practice in years" required>
+                            </div>
+                        </div>
+                        <div class="form-section">
                             <div id="blog-writerEmail" class="form-group vtiny-bm">
                                 <label for="writerEmail" class="form-label green-text vbold-text xtiny-bm">Writer's Email</label>
                                 <input type="text" class="form-control" name="writerEmail" id="writerEmail" value="" readonly>
+                            </div>
+                            <div id="blogDate" class="form-group vtiny-bm">
+                                <label for="createDate" class="form-label green-text vbold-text xtiny-bm">Date Written</label>
+                                <input type="text" class="form-control regular-text" name="createDate" id="createDate" value="" readonly>
                             </div>
                         </div>
                         <hr class="large-bm">
@@ -209,10 +224,10 @@
                             </div>
                         </div>
                         <hr class="large-bm">
-                        <div id="set-featured" class="set-featured large-bm">
+                        <div id="set-featured" class="set-featured xlarge-bm">
                             <div id="set-as-featured" class="form-group xtiny-bm">
                                 <input type="checkbox" name="featured-blog" id="featured-blog" value="Yes", class="">
-                                <label for="featured-blog" class="form-label green-text vbold-text xtiny-bm">Set post as featured</label>
+                                <label for="featured-blog" class="form-label green-text vbold-text xtiny-bm">Set as featured</label>
                             </div>
                             <div id="featured-start-date" class="form-group xtiny-bm">
                                 <label for="featured-start" class="form-label green-text vbold-text xtiny-bm">Start Date</label>
@@ -233,11 +248,11 @@
                             <div id="blogForm-right" class="actions-right">
                                 <button type="submit" id="publish" class="action-block-publish no-border">
                                     <!-- <i class="bi bi-send action-icon-new"></i> -->
-                                    <p class="action-name bold-text no-padding white-text">Publish Post</p>
+                                    <p class="action-name bold-text no-padding white-text">Publish</p>
                                 </button>
                                 <button type="submit" id="save-draft" class="action-block-draft ">
                                     <!-- <i class="bi bi-save action-icon-draft"></i> -->
-                                    <p class="action-name vbold-text no-padding green-text">Save as Draft</p>
+                                    <p class="action-name bold-text no-padding green-text">Save as Draft</p>
                                 </button>
                             </div>
                         </div>
