@@ -81,14 +81,12 @@
                 </button>
                 <button class="action-block no-border">
                     <i class="bi bi-funnel action-icon"></i>
-                    <p class="action-name bold-text small-text no-padding hide-sm">Filter</p>
+                    <p class="action-name small-text no-padding hide-sm">Filter</p>
                 </button>
-                <button class="action-block no-border">
-                    <i class="bi bi-search action-icon"></i>
-                    <form action="" method="" class="form-group">
-                        <input type="text" class="form-control small-text no-padding action-name" name="search" id="articleSearch" placeholder="  Search">
-                    </form>
-                </button>
+                <form id="articleSearch" action="" method="" class="form-group action-block no-border">
+                    <i class="bi bi-search small-text"></i>
+                    <input type="search" name="article-search" id="article-search" class="form-control small-text no-padding action-name no-border" placeholder="  Search">
+                </form>
             </div>
             <div id="blogsRight" class="actions-right">
                 <button id="write-post" class="action-block-new no-border">
@@ -97,7 +95,7 @@
                 </button>
                 <button id="delete-post" class="action-block no-border">
                     <i class="bi bi-trash3 action-icon"></i>
-                    <p class="action-name vbold-text small-text no-padding hide-sm">Delete</p>
+                    <p class="action-name small-text no-padding hide-sm">Delete</p>
                 </button>
             </div>
         </section>
