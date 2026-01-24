@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         'sub-button',
         'sub-button-md',
         'sub-button-sm',
-        'sub-button-xs'
+        'sub-button-xs',
+        'portal-subs'
     ];
 
     // --- Visibility Functions ---
@@ -37,38 +38,44 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // --- Event Listeners ---
+    subForm.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 
-    // 1. Show/Hide Form on all defined Trigger Button Clicks (Toggle Functionality)
     toggleButtonIds.forEach(id => {
         const button = document.getElementById(id);
         if (button) {
-            button.addEventListener('click', toggleForm);
+            button.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleForm();
+            });
             console.log(`SUCCESS: Listener attached to button: ${id}`);
         } else {
-            // This error will now fire if the element truly isn't in the DOM
             console.error(`ERROR: Button with ID ${id} not found.`);
         }
     });
 
-    // 2. Hide Form on Close Button Click (X button on the popup)
-    closeButton.addEventListener('click', hideForm);
+    closeButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideForm();
+    });
+
+    document.addEventListener('click', () => {
+        if (subForm.classList.contains('visible-form')) {
+        hideForm();
+        }
+    });
 
     // 3. Form Submission Handling (Remains the same, forces a hide)
     newsletterForm.addEventListener('submit', function (e) {
-        e.preventDefault(); // Stop the default browser form submission
+        e.preventDefault(); 
 
-        // Log data (replace with actual AJAX/fetch request to server)
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         console.log(`Submitting: Name='${name}', Email='${email}'`);
 
-        // Phase 1: Show Success Message (500ms duration)
-
-        // Hide the main submit button
         mainSubmitButton.classList.add('hidden-button');
 
-        // Show the success button
         successButton.classList.remove('hidden-button');
 
         console.log("Success message shown.");
