@@ -648,6 +648,31 @@ ul .nav-item {
     grid-template-rows: auto;
 }
 
+.dash-greetings {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, #008c8c, #0e8181, #025353);
+    background-color: #ffffff;
+    box-shadow: 3px 3px 15px #cecece;
+}
+
+.greetings-text {
+    text-shadow: 1px 1px 3px #5c5c5c;
+}
+
+.dash-morning {
+    color: #ffffff;
+    font-size: 6rem;
+    text-shadow: 5px 5px 80px #ffffff,
+                5px 5px 80px #ffffff,
+                5px 5px 80px #ffffff,
+                5px 5px 80px #ffffff;
+    margin-right: 1rem;
+}
+
 .dash-block {
     display: grid;
     grid-template-columns: 1fr;
