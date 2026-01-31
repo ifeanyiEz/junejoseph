@@ -589,7 +589,6 @@ ul .nav-item {
 
 .user-portal-main {
     width: 100%;
-    position: absolute;
     top: 45px;
 }
 
@@ -611,7 +610,7 @@ ul .nav-item {
 .crumbs-area {
     width: 100%;
     display: grid;
-    gap: 2rem;
+    gap: 0.5rem;
     grid-template-columns: auto 3fr auto;
     grid-template-rows: auto;
     align-items: center;
