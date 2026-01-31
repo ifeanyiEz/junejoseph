@@ -10,6 +10,11 @@ function getSidebarPercent() {
     return (width / window.innerWidth) * 100;
 }
 
+function getOpenBtnPercent() {
+    const openBtnWidth = openBtn.offsetWidth;
+    return (openBtnWidth / window.innerWidth) * 100;
+}
+
 function openSidebar() {
     // Let sidebar auto-size (px or max-content or any size)
     sidebar.style.width = "max-content";
@@ -18,9 +23,10 @@ function openSidebar() {
         // Wait for rendering to update
         requestAnimationFrame(() => {
             const percent = getSidebarPercent();
+            const openBtnPercent = getOpenBtnPercent();
 
             content.style.margin = `0.5% 0.5% 0.5% ${percent + 0.5}%`;
-            sectionTiltle.style.marginLeft = `${percent/1.25}%`;
+            sectionTiltle.style.marginLeft = `${percent - openBtnPercent + 1.5}%`;
             content.style.width = `calc(${99 - percent}% )`;
         });
     }
