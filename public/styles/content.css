@@ -658,13 +658,23 @@ ul .nav-item {
     box-shadow: 3px 3px 15px #cecece;
 }
 
+.dash-info-greetings {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: auto;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #ffffff;
+}
+
 .greetings-text {
     text-shadow: 1px 1px 3px #5c5c5c;
 }
 
 .dash-morning {
     color: #0d7e92;
-    font-size: 6rem;
+    font-size: 5rem;
     /* text-shadow: 5px 5px 80px #b0e7eb,
                 5px 5px 80px #b0e7eb,
                 5px 5px 80px #b0e7eb,
@@ -674,7 +684,7 @@ ul .nav-item {
 
 .dash-afternoon {
     color: #ee9827;
-    font-size: 6rem;
+    font-size: 5rem;
     /* text-shadow: 5px 5px 80px #ecc131,
                 5px 5px 80px #ecc131,
                 5px 5px 80px #ecc131,
@@ -684,7 +694,7 @@ ul .nav-item {
 
 .dash-evening {
     color: #042e55;
-    font-size: 6rem;
+    font-size: 5rem;
     /* text-shadow: 5px 5px 80px #5f5f5d,
                 5px 5px 80px #5f5f5d,
                 5px 5px 80px #5f5f5d,
