@@ -1,10 +1,9 @@
 import express from "express";
 import methodOverride from "method-override";
-import bcrypt from "bcrypt";
+import dashboardRoutes from "./src/routes/dashboard.routes.js";
 
 const app = express();
 const port = 5000;
-const saltRounds = 10;
 
 const loginData = [];
 const thisLogin = {};
@@ -13,65 +12,11 @@ const subCategories = [];
 const categories = [];
 const allBlogs = [];
 
-async function hashPassword(password) {
-    try {
-        const hash = await bcrypt.hash(password, saltRounds);
-        return hash;
-    } catch (error) {
-        console.error("Error hashing password:", error);
-        throw new Error("Failed to hash password.");
-    }
-}
-
-async function comparePassword(password, hash) {
-    try {
-        const match = await bcrypt.compare(password, hash);
-        return match;
-    } catch (error) {
-        console.error("Error comparing password:", error);
-        return false;
-    }
-}
-
-const userRoles = [
-    {
-        "roleID":"1001",
-        "roleName":"Admin User",
-        "roleDescription":"Owns the project",
-        "rolePermissions": "",
-        "roleParent":"",
-        "roleConstraints":""
-    },
-    {
-        "roleID":"1002",
-        "roleName":"Registered User",
-        "roleDescription":"Can comment and react to posts, ask questions and recieve private responses",
-        "rolePermissions": "",
-        "roleParent":"",
-        "roleConstraints":""
-    },
-    {
-        "roleID":"1003",
-        "roleName":"Unregistered User",
-        "roleDescription":"Can read posts and sign up for monthly digest",
-        "rolePermissions": "",
-        "roleParent":"",
-        "roleConstraints":""
-    }
-];
-
-function slugGen(text) {
-return text.toString().toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.json());
+app.use("/user-portal", dashboardRoutes);
 
 app.route("/")
     .get((req, res) => {
@@ -121,11 +66,6 @@ app.route("/login")
             return res.status(500).render("login.ejs", { error: { message: "An internal server error occurred." } });
         }
     });
-
-app.route("/user-portal/dashboard")
-    .get((req, res) => {
-        res.render("dashboard.ejs");
-    })
 
 app.route("/user-portal/articles")
     .get((req, res) => {
