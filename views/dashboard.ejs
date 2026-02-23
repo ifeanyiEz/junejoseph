@@ -10,10 +10,11 @@
     <div id="dashContent" class="dash-content">
         <section id="welcome" class="dash-greetings">
             <div class="dash-numbers">
-                <h2 id="greetings" class="vbold-text white-text no-wrap greetings-text">Good morning Ifeanyi</h2>
+                <h2 id="greetings" class="vbold-text white-text no-wrap greetings-text"><%= greeting %></h2>
                 <h5 class="vbold-text white-text greetings-text">Welcome back</h5>
+                <h6 id="dash-message" class="bold-text white-text greetings-text vlarge-tm"><%= dashMessage %></h6>
             </div>
-            <i class="bi bi-clouds-fill right-text dash-morning"></i>
+            <i class="bi <%= icon %> right-text <%= iconClass %>"></i>
         </section>
         <section id="dashArticles" class="dash-section">
             <div id="articlesSummary" class="dash-summary">
