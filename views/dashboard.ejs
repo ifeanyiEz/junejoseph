@@ -8,13 +8,17 @@
 
 <div id="portalMain" class="portal-main">
     <div id="dashContent" class="dash-content">
-        <section id="welcome" class="dash-greetings">
-            <div class="dash-numbers">
-                <h2 id="greetings" class="vbold-text no-wrap vtiny-tm"><%= greeting %></h2>
-                <h5 class="vbold-text">Welcome back</h5>
-                <h5 id="dash-message" class="bold-text vlarge-tm"><%= dashMessage %></h5>
+        <section id="welcome" class="dash-block">
+            <div class="dash-info-greetings">
+                <div class="dash-numbers">
+                    <h2 id="greetings" class="vbold-text no-wrap xtiny-tm"><%= greeting %></h2>
+                    <h5 class="vbold-text">Welcome back</h5>
+                </div>
+                <i class="bi <%= icon %> right-text <%= iconClass %>"></i>
             </div>
-            <i class="bi <%= icon %> right-text <%= iconClass %>"></i>
+            <div class="dash-link centered-text">
+                <h5 id="dash-message" class="bold-text white-text greetings-text xtiny-tm"><%= dashMessage %></h5>
+            </div>
         </section>
         <section id="dashArticles" class="dash-section">
             <div id="articlesSummary" class="dash-summary">
