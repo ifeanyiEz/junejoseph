@@ -450,6 +450,12 @@ html, body {
         grid-template-rows: auto auto auto auto;
     }
 
+    #question-form {
+        right: 15%;
+        width: 70%;
+        padding: 1rem;
+    }
+
     /* End Portal Questions */
 }
 
@@ -583,6 +589,12 @@ html, body {
         grid-template-rows: auto auto auto;
     }
 
+    #question-form {
+        right: 15%;
+        width: 70%;
+        padding: 1rem;
+    }
+
     /* End Portal Questions */
 }
 
@@ -684,6 +696,12 @@ html, body {
     .questions-summary {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto;
+    }
+
+    #question-form {
+        right: 20%;
+        width: 60%;
+        padding: 1rem;
     }
 
     /* End Portal Questions */
@@ -806,6 +824,12 @@ html, body {
         grid-template-rows: auto auto auto;
     }
 
+    #question-form {
+        right: 17.5%;
+        width: 50%;
+        padding: 1rem;
+    }
+
     /* End Portal Questions */
 }
 
@@ -897,6 +921,12 @@ html, body {
         gap: 1rem;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
+    }
+
+    #question-form {
+        right: 20%;
+        width: 40%;
+        padding: 1rem;
     }
 
 }
