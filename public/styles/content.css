@@ -659,36 +659,36 @@ ul .nav-item {
 }
 
 .greetings-text {
-    /* text-shadow: 1px 1px 3px #5c5c5c; */
+    text-shadow: 1px 1px 3px #5c5c5c;
 }
 
 .dash-morning {
     color: #0d7e92;
     font-size: 6rem;
-    text-shadow: 5px 5px 80px #b0e7eb,
+    /* text-shadow: 5px 5px 80px #b0e7eb,
                 5px 5px 80px #b0e7eb,
                 5px 5px 80px #b0e7eb,
-                5px 5px 80px #b0e7eb;
+                5px 5px 80px #b0e7eb; */
     margin-right: 1rem;
 }
 
 .dash-afternoon {
     color: #ee9827;
     font-size: 6rem;
-    text-shadow: 5px 5px 80px #ecc131,
+    /* text-shadow: 5px 5px 80px #ecc131,
                 5px 5px 80px #ecc131,
                 5px 5px 80px #ecc131,
-                5px 5px 80px #ecc131;
+                5px 5px 80px #ecc131; */
     margin-right: 1rem;
 }
 
 .dash-evening {
     color: #042e55;
     font-size: 6rem;
-    text-shadow: 5px 5px 80px #5f5f5d,
+    /* text-shadow: 5px 5px 80px #5f5f5d,
                 5px 5px 80px #5f5f5d,
                 5px 5px 80px #5f5f5d,
-                5px 5px 80px #5f5f5d;
+                5px 5px 80px #5f5f5d; */
     margin-right: 1rem;
 }
 
