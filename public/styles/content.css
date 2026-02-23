@@ -651,7 +651,7 @@ ul .nav-item {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: auto;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 1rem;
     /* background-image: linear-gradient(to right, #008c8c, #0e8181, #025353); */
     background-color: #ffffff;
