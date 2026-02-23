@@ -16,9 +16,13 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "bootstrap-icons": "^1.13.1",
-    "ejs": "^3.1.10",
+    "dotenv": "^17.3.1",
+    "ejs": "^3.0.2",
     "express": "^5.1.0",
     "method-override": "^3.0.0",
-    "pg": "^8.16.3"
+    "pg": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.16.0"
   }
 }
