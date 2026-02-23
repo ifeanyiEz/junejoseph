@@ -672,6 +672,16 @@ ul .nav-item {
     margin-right: 1rem;
 }
 
+.dash-afternoon {
+    color: #ee9827;
+    font-size: 6rem;
+    text-shadow: 5px 5px 80px #ecc131,
+                5px 5px 80px #ecc131,
+                5px 5px 80px #ecc131,
+                5px 5px 80px #ecc131;
+    margin-right: 1rem;
+}
+
 .dash-block {
     display: grid;
     grid-template-columns: 1fr;
