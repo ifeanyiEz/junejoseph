@@ -47,31 +47,50 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mb-md-0 me-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-portal/questions">
-                                   <i class="bi bi-bell top-icon"></i><span class=" hide-sm"> Questions</span>
+                                <a class="nav-link bold-text" href="/user-portal/questions"><i class="bi bi-bell top-icon"></i><span class=" hide-sm"> Questions</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-portal/subscriptions">
-                                   <i class="bi bi-envelope top-icon"></i><span class="hide-sm"> Subscriptions</span>
+                                <a class="nav-link bold-text" href="/user-portal/subscriptions"><i class="bi bi-envelope top-icon"></i><span class="hide-sm"> Subscriptions</span>
                                 </a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-portal/users">
-                                   <i class="bi bi-people top-icon"></i><span class="hide-sm"> Accounts</span>
+                                <a class="nav-link bold-text" href="/user-portal/users"><i class="bi bi-people top-icon"></i><span class="hide-sm"> Accounts</span>
                                 </a>
                             </li> 
                             <li class="nav-item">
-                                <a class="nav-link" href="/user-portal/settings">
-                                   <i class="bi bi-gear-fill top-icon" style="color: #008c8c;"></i><span class="hide-sm"> Settings</span>
+                                <a class="nav-link bold-text" href="/user-portal/settings"> <i class="bi bi-gear-fill top-icon" style="color: #008c8c;"></i><span class="hide-sm"> Settings</span>
                                 </a>
                             </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="/user-portal/profile">
+                             <li id="userDropdown" class="nav-item">
+                                <a class="nav-link small-text bold-text" href="#user-dropdown">
                                    <i class="bi bi-person-square top-icon" style="color: #008c8c;"></i><span class="hide-sm"> Full Name</span>
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div id="user-dropdown" class="hidden-form">
+                        <div class="dropdown-content">
+                            <div id="profileImg">
+                                <img class="profile_img" src="/images/ifunanya.jpg" alt="Ifeanyi's image">
+                            </div>
+                            <div id="profile-info">
+                                <p id="user-name" class="no-bm vbold-text">Ifeanyi Ezugworie</p>
+                                <p id="user-email" class="no-bm bold-text">ezugworie.ofor@gmail.com</p>
+                                <p id="user-role" class="no-bm bold-text">User</p>
+                                <p id="profile-view" class="no-bm bold-text"></p>
+                            </div>
+                            <div class="d-grid">
+                                <a href="/user-portal/profile" id="portal-registration" class="btn action-block no-border" role="button">
+                                    <p class="action-name small-text bold-text no-padding">Edit Profile <i class="bi bi-box-arrow-right action-icon-new"></i></p>
+                                </a>
+                            </div>
+                            <div class="d-grid">
+                                <a href="/signout" id="portal-registration" class="btn action-block-new no-border" role="button">
+                                    <p class="action-name small-text bold-text no-padding white-text">Sign Out <i class="bi bi-box-arrow-right action-icon-new"></i></p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -102,11 +121,6 @@
                         <a href="/user-portal/users" class="xtiny-tbm">
                             <i class="bi bi-people side-icon"></i>Registered Users
                         </a>
-                        <div id="sign-out">
-                            <a href="/signout" id="signout-button" class="xtiny-tbm">
-                                <i class="bi bi-box-arrow-right side-icon"></i>Sign Out
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <div id="userPortalMain" class="user-portal-main">
