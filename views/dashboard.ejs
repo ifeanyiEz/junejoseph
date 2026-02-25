@@ -9,16 +9,17 @@
 <div id="portalMain" class="portal-main">
     <div id="dashContent" class="dash-content">
         <section id="welcome" class="dash-block">
-            <div class="dash-info-greetings">
-                <div class="dash-numbers">
-                    <h2 id="greetings" class="vbold-text no-wrap xtiny-tm"><%= greeting %></h2>
-                    <h5 class="vbold-text">Welcome back</h5>
+            <div id="welcome-area">
+                <div class="dash-info-greetings">
+                    <div class="dash-numbers">
+                        <h2 id="greetings" class="vbold-text no-wrap xtiny-tm"><%= greeting %></h2>
+                        <h5 class="vbold-text">Welcome back</h5>
+                    </div>
+                    <i id="time-icon" class="bi <%= icon %> right-text <%= iconClass %>"></i>
                 </div>
-                <i class="bi <%= icon %> right-text <%= iconClass %>"></i>
+                <p id="dash-message" class="vbold-text orange-text no-bm xtiny-tm"><%= dashMessage %></p>
             </div>
-            <div class="dash-link centered-text">
-                <h5 id="dash-message" class="bold-text white-text greetings-text xtiny-tm"><%= dashMessage %></h5>
-            </div>
+            <div class="dash-link centered-text"></div>
         </section>
         <section id="dashArticles" class="dash-section">
             <div id="articlesSummary" class="dash-summary">
@@ -86,5 +87,13 @@
         <section class="dash-section"><p>Content...</p></section>
     </div>
 </div>
+
+<script id="dashboard-data" type="application/json">
+    {
+        "user": <%- JSON.stringify(user) %>,
+        "messages": <%- JSON.stringify(dashboardMessages) %>
+    }
+</script>
+<script src="/js/time-update.js"></script>
 
 <%- include("partials/portal-footer.ejs") %>
