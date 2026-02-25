@@ -19,6 +19,27 @@
         return "night";
     }
 
+    function getGreeting(hour) {
+
+        if (hour >= 0 && hour <= 12) return "Good Morning";
+        if (hour > 12 && hour < 16) return "Good Afternoon";
+        return "Good Evening";
+    }
+
+     const iconMap = {
+        "Good Morning": {
+            icon: "bi-clouds-fill",
+            cssClass: "dash-morning"
+        },
+        "Good Afternoon": {
+            icon: "bi-cloud-sun-fill",
+            cssClass: "dash-afternoon"
+        },
+        "Good Evening": {
+            icon: "bi-cloud-moon-fill",
+            cssClass: "dash-evening"
+        }
+    };
 
     function updateDashboard() {
         const hour = new Date().getHours();
