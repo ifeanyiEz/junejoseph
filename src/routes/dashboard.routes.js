@@ -1,4 +1,5 @@
 import express from "express";
+import { dashboardMessages } from "../config/dash_messages.config.js";
 import { buildDashboardMessage } from "../services/dashboard.services.js";
 
 const router = express.Router();
@@ -16,7 +17,9 @@ router.get("/dashboard", (req, res) => {
         greeting: dashboardData.greetingLine,
         dashMessage: dashboardData.adviceLine,
         icon: dashboardData.icon,
-        iconClass: dashboardData.cssClass
+        iconClass: dashboardData.cssClass,
+        user: signedInUser,
+        dashboardMessages
     });
 });
 
