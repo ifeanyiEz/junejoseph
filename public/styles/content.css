@@ -651,6 +651,11 @@ ul .nav-item {
     display: flex;
     flex-direction: column;
     padding: 1rem 1.5rem 0.5rem 1.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 10px solid #008c8ca2;
     background-color: #ffffff;
 }
 
@@ -669,8 +674,6 @@ ul .nav-item {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: auto;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
     background-color: #ffffff;
 }
 
