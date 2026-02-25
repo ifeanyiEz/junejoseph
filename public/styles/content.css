@@ -490,10 +490,10 @@ ul .nav-item {
     list-style: none;
 }
 
-/* User Portal */
+/* USER PORTAL */
 
 .top-icon {
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-right: 0.2rem;
 }
 
@@ -502,7 +502,7 @@ ul .nav-item {
     margin-right: 0.75rem;
 }
 
-/* End of User Portal */
+/* END OF USER PORTAL */
 
 /* COLLAPSIBLE SIDEBAR */
 
@@ -647,6 +647,13 @@ ul .nav-item {
     grid-template-rows: auto;
 }
 
+#welcome-area {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+    background-color: #ffffff;
+}
+
 .dash-greetings {
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -662,7 +669,6 @@ ul .nav-item {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: auto;
-    padding: 1rem 1.5rem 0.5rem 1.5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     background-color: #ffffff;
@@ -674,31 +680,19 @@ ul .nav-item {
 
 .dash-morning {
     color: #0d7e92;
-    font-size: 5rem;
-    /* text-shadow: 5px 5px 80px #b0e7eb,
-                5px 5px 80px #b0e7eb,
-                5px 5px 80px #b0e7eb,
-                5px 5px 80px #b0e7eb; */
+    font-size: 4rem;
     margin-right: 1rem;
 }
 
 .dash-afternoon {
     color: #ee9827;
-    font-size: 5rem;
-    /* text-shadow: 5px 5px 80px #ecc131,
-                5px 5px 80px #ecc131,
-                5px 5px 80px #ecc131,
-                5px 5px 80px #ecc131; */
+    font-size: 4rem;
     margin-right: 1rem;
 }
 
 .dash-evening {
     color: #042e55;
-    font-size: 5rem;
-    /* text-shadow: 5px 5px 80px #5f5f5d,
-                5px 5px 80px #5f5f5d,
-                5px 5px 80px #5f5f5d,
-                5px 5px 80px #5f5f5d; */
+    font-size: 4rem;
     margin-right: 1rem;
 }
 
