@@ -39,6 +39,52 @@ html, body {
     padding: 1.45rem;
 }
 
+#user-dropdown {
+    position: fixed;
+    top: 45px;
+    right: 2%;
+    width: 10%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    box-shadow: 2px 2px 20px #d3d3d3;
+}
+
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile_img {
+    width: 50%;
+    border-radius: 50%;
+}
+
+#profileImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar-area {
+    width: 1.3%;
+    border-radius: 0.5px;
+    border: 1px solid #dedede;
+}
+
+.avatar-img {
+    width: 90%;
+    border-radius: 0.5px;
+}
+
+#avatar-link {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+}
+
 #blog-body {
     padding-bottom: 5.8rem;
 }
