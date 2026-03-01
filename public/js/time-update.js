@@ -7,6 +7,7 @@
     const greetingsText = document.getElementById("greetings");
     const adviceText = document.getElementById("dash-message");
     const timeIcon = document.getElementById("time-icon");
+    const welcomeArea = document.getElementById("welcome-area");
 
     let currentTimeWindow = null;
     
@@ -28,16 +29,13 @@
 
      const iconMap = {
         "Good Morning": {
-            icon: "bi-clouds-fill",
-            cssClass: "dash-morning"
+            bgCloud: "bg-morning"
         },
         "Good Afternoon": {
-            icon: "bi-cloud-sun-fill",
-            cssClass: "dash-afternoon"
+            bgCloud: "bg-afternoon"
         },
         "Good Evening": {
-            icon: "bi-cloud-moon-fill",
-            cssClass: "dash-evening"
+            bgCloud: "bg-evening"
         }
     };
 
@@ -54,14 +52,13 @@
 
         const advice = messages[tWindow][gender];
 
-        const selectedIcon = iconMap[greeting] || {
-            icon: "bi-cloud",
-            cssClass: ""
+        const selectedBg = iconMap[greeting].bgCloud || {
+            bgCloud: ""
         };
 
         greetingsText.textContent = `${greeting}, ${user.firstName}.`;
         adviceText.textContent = advice;
-        timeIcon.className = `bi ${selectedIcon.icon} right-text ${selectedIcon.cssClass}`;
+        welcomeArea.className = `${selectedBg}`;
     }
 
     updateDashboard();
