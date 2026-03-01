@@ -12,25 +12,23 @@ export function buildDashboardMessage(user, date = new Date()) {
 
     const iconMap = {
         "Good Morning": {
-            icon: "bi-clouds-fill",
-            cssClass: "dash-morning"
+            bgCloud: "bg-morning"
         },
         "Good Afternoon": {
-            icon: "bi-cloud-sun-fill",
-            cssClass: "dash-afternoon"
+            bgCloud: "bg-afternoon"
         },
         "Good Evening": {
-            icon: "bi-cloud-moon-fill",
-            cssClass: "dash-evening"
+            bgCloud: "bg-evening"
         }
     };
 
-    const selectedIcon = iconMap[greeting] || { icon: "bi-cloud", cssClass: "" };
+    const selectedBg = iconMap[greeting].bgCloud || {
+        bgCloud: ""
+    };
 
     return {
         greetingLine: `${greeting}, ${user.firstName}.`,
         adviceLine: advice,
-        icon: selectedIcon.icon,
-        cssClass: selectedIcon.cssClass
+        bgCloud: selectedBg
     };
 }
