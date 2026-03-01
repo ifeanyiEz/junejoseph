@@ -16,8 +16,7 @@ router.get("/dashboard", (req, res) => {
     res.render("dashboard.ejs", {
         greeting: dashboardData.greetingLine,
         dashMessage: dashboardData.adviceLine,
-        icon: dashboardData.icon,
-        iconClass: dashboardData.cssClass,
+        bgClass: dashboardData.selectedBg,
         user: signedInUser,
         dashboardMessages
     });
