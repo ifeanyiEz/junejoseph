@@ -220,6 +220,10 @@
     font-weight: 500 !important;
 }
 
+.sbold-text {
+    font-weight: 600 !important;
+}
+
 .vbold-text {
     font-weight: 700 !important;
 }
@@ -674,7 +678,10 @@ ul .nav-item {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: auto;
-    background-color: #ffffff;
+}
+
+#dash-message {
+    font-size: 1.15rem;
 }
 
 .greetings-text {
@@ -685,6 +692,27 @@ ul .nav-item {
     color: #0d7e92;
     font-size: 4rem;
     margin-right: 1rem;
+}
+
+.bg-morning {
+    background-image: url("/images/m_clouds.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.bg-afternoon {
+    background-image: url("/images/a_clouds.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.bg-evening {
+    background-image: url("/images/e_clouds.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right center;
 }
 
 .dash-afternoon {
