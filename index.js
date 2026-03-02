@@ -1,6 +1,9 @@
 import express from "express";
 import methodOverride from "method-override";
+import session from "express-session";
 import dashboardRoutes from "./src/routes/dashboard.routes.js";
+import authRoutes from "./src/routes/auth.routes.js";
+
 
 const app = express();
 const port = 5000;
@@ -16,6 +19,18 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.json());
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        httpOnly: true,
+        secure: false
+    }
+}));
+
+app.use("/", authRoutes);
 app.use("/user-portal", dashboardRoutes);
 
 app.route("/")
