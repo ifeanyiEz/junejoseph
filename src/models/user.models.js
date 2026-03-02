@@ -30,3 +30,15 @@ export async function getAllUsers() {
     
     return userAccounts;
 }
+
+export async function getUserByEmail(email) {
+    const instruction = `
+        SELECT user_id, first_name, last_name, email, password
+        FROM users
+        WHERE email = $1;
+    `;
+    const values = [email];
+    const result = await pool.query(instruction, values);
+    
+    return result.rows[0] || null;
+}
