@@ -68,6 +68,15 @@
     background-color: transparent;
 }
 
+.b-button-orange {
+    font-size: 1rem;
+    padding: 0.3rem 2.5rem;
+    text-align: center;
+    border: 1px solid #f83c03;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
 .nav-button-size {
     max-width: 10rem;
 }
