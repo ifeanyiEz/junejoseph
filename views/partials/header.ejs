@@ -56,12 +56,20 @@
                             <li class="nav-item">
                                 <a class="nav-link menu-margin" href="/questions">Info Bank</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link button-green nav-button-size" href="/login">Sign In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link button-green nav-button-size bg-dark white-text" href="/signup">Sign Up</a>
-                            </li>
+                            
+                            <% if (locals.user && user.email) { %>
+                                <li class="nav-item">
+                                    <a class="nav-link nav-button-size bg-orange white-text b-button-orange" href="/signout">Sign Out</a>
+                                </li>
+                            <% } else { %>
+                                <li class="nav-item">
+                                    <a class="nav-link button-green nav-button-size" href="/login">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link button-green nav-button-size bg-dark white-text" href="/signup">Sign Up</a>
+                                </li>
+                            <% } %>
+                           
                             <li class="nav-item hide-s-xl">
                                 <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
                             </li>
