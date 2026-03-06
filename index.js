@@ -30,57 +30,19 @@ app.use(session({
     }
 }));
 
+app.use((req, res, next) => {
+    res.locals.user = req.session.user || null;
+    next();
+});
+
 app.use("/", authRoutes);
 app.use("/user-portal", dashboardRoutes);
 
 app.route("/")
     .get((req, res) => {
-    res.render("index.ejs", { thisLogin });
+    res.render("index.ejs");
 });
 
-app.route("/login")
-    .get((req, res) => {
-        res.render("login.ejs");
-    })
-    .post(async (req, res) => {
-        const {email, password} = req.body;
-
-        const existingUser = userAccounts.find(user => user.email === email);
-        const invalidCredentials = {"message": "Invalid email or password"}
-
-        if (!existingUser) {
-            return res.status(400).render("login.ejs", { invalidCredentials });
-        }
-
-        try {
-            const passwordMatch = await comparePassword(password, existingUser.password);
-
-            if (passwordMatch) {
-
-                const alreadyLoggedIn = loginData.find(user => user.email === email);
-
-                if (!alreadyLoggedIn) {
-
-                    thisLogin.id = existingUser.userId;
-                    thisLogin.firstName = existingUser.firstName;
-                    thisLogin.lastName = existingUser.lastName;
-                    thisLogin.email = existingUser.email;
-                    thisLogin.password = existingUser.password;
-
-                     loginData.unshift(thisLogin);
-                }
-                console.log(`This login Id is: ${ thisLogin.id }`)
-                return res.redirect("/");
-        
-            } else {
-                return res.status(401).render("login.ejs", { error: invalidCredentials });
-            }
-
-        } catch (error) {
-            console.error("Login failed during password comparison:", error);
-            return res.status(500).render("login.ejs", { error: { message: "An internal server error occurred." } });
-        }
-    });
 
 app.route("/user-portal/articles")
     .get((req, res) => {
@@ -112,62 +74,16 @@ app.route("/user-portal/users")
         res.render("users.ejs");
     })
 
-app.route("/signup")
-    .get((req, res) => {
-        res.render("signup.ejs");
-    })
-    .post(async (req, res) => {
-        const {firstName, lastName, email, password} = req.body;
-
-        if (!email || !password || !firstName) {
-            return res.status(400).render("signup.ejs", { 
-                error: { message: "All fields are required." } 
-            });
-        }
-
-        const existingUser = userAccounts.find(user => user.email === email);
-
-        if (existingUser) {
-            const alreadyExists = {
-                "message": `An account with email ${email} already exists. Please use a different email or login if you already have an account.`
-            }
-            return res.status(400).render("signup.ejs", { error: alreadyExists });
-        }
-
-        try {
-            const hashedPassword = await hashPassword(password); 
-
-            const newUser = {
-                userId: slugGen(email),
-                firstName, 
-                lastName, 
-                email, 
-                password: hashedPassword,
-            };
-            console.log(`New user is: ${ newUser.userId }`)
-            userAccounts.unshift(newUser);
-
-            res.redirect("/login");
-
-        } catch (error) {
-            console.error("Signup failed:", error);
-            
-            res.status(500).render("signup.ejs", { 
-                error: { message: "An unexpected error occurred during signup." } 
-            });
-        }
-    });
-
 app.route("/blogs/new")
     .get((req, res) => {
         // GET /blogs/new: Opens the form used to create a new blog post
-        res.render("new-blog.ejs", { thisLogin, allBlogs });
+        res.render("new-blog.ejs", { allBlogs });
     });
 
 app.route("/blogs")
     .get((req, res) => {
         // Fetch all blog posts from the database (or array)
-        res.render("all-blog.ejs", { thisLogin, allBlogs });
+        res.render("all-blog.ejs", { allBlogs });
     })
     .post((req, res) => {
         // Handle form submission to create a new post (from the /blogs/new form)
