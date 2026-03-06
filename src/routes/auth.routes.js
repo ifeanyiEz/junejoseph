@@ -4,6 +4,10 @@ import { registerUser, loginUser } from "../services/user.services.js";
 
 const router = express.Router();
 
+router.get("/signup", (req, res) => {
+    res.render("signup.ejs");
+});
+
 router.post("/signup", async (req, res) => {
     try {
         const { firstName, lastName, email, password } = req.body;
@@ -23,7 +27,7 @@ router.post("/signup", async (req, res) => {
             gender: "neutral"
         };
 
-        res.redirect("/user-portal/dashboard");
+        res.redirect("/");
 
     } catch (error) {
         console.error(error);
@@ -31,6 +35,9 @@ router.post("/signup", async (req, res) => {
     }
 });
 
+router.get("/login", (req, res) => {
+    res.render("login.ejs");
+});
 
 router.post("/login", async (req, res) => {
     try {
@@ -48,11 +55,11 @@ router.post("/login", async (req, res) => {
             user_id: user.user_id,
             first_name: user.first_name,
             last_name: user.last_name,
-            email: newUser.email,
+            email: user.email,
             gender: "neutral"
         };
 
-        res.redirect("/user-portal/dashboard");
+        res.redirect("/");
 
     } catch (error) {
         console.error(error);
