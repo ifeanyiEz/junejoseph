@@ -3,12 +3,12 @@
 <div id="blog-welcome">
     <div class="">
         <div class="welcome-msg">
-            <h1 class="home-title bold-text">Life Style, Health Conditions and Nature's Solutions</h1>
-            <h1 class="home-title-lg bold-text">Life Style, Health Conditions <br> and Nature's Solutions</h1>
-            <h2 class="sub-title orange-text regular-text">A resource for information on natural ways to live healthy</h2>
+            <h1 class="home-title sbold-text">Life Style, Health Conditions and Nature's Solutions</h1>
+            <h1 class="home-title-lg sbold-text">Life Style, Health Conditions <br> and Nature's Solutions</h1>
+            <h2 class="sub-title orange-text sbold-text">A resource for information on natural ways to live healthy</h2>
         </div>
         <div class="hero-button">
-            <% if (locals.thisLogin && thisLogin.email) { %>
+            <% if (locals.user && user.email) { %>
                 <button id="body-question" class="nav-link button-green bg-dark white-text bold-text">
                     Question</button>
                 <a href="/focus" class="nav-link button-green green-text bold-text">Conversation</a>
