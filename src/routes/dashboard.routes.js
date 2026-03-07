@@ -5,11 +5,18 @@ import { buildDashboardMessage } from "../services/dashboard.services.js";
 const router = express.Router();
 
 router.get("/dashboard", (req, res) => {
-    // Temporary mock signed-in user
-    const signedInUser = {
-        firstName: "Ifeanyi",
-        gender: "neutral"
-    };
+    // const signedInUser = {
+    //     firstName: req.session.user.first_name,
+    //     gender: req.session.user.gender || "neutral"
+    // };
+
+    const signedInUser = req.session.user;
+    
+    console.log(`The signed-in user is: ${signedInUser.firstName}`);
+
+    if(!signedInUser) {
+        return res.redirect("/login");
+    }
     
     const dashboardData = buildDashboardMessage(signedInUser);
     
