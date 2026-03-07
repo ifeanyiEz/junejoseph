@@ -28,10 +28,20 @@ import pkg from "pg";
 const { Pool } = pkg;
 import config from '../config/index.js';
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL || `postgres://${config.db.user}:${config.db.password}@${config.db.host}:${config.db.port}/${config.db.database}`,
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
-});
+const poolConfig = config.db.connectionString 
+    ? { 
+        connectionString: config.db.connectionString,
+        ssl: { rejectUnauthorized: false } 
+      }
+    : {
+        user: config.db.user,
+        host: config.db.host,
+        database: config.db.database,
+        password: config.db.password,
+        port: config.db.port,
+      };
+
+const pool = new Pool(poolConfig);
 
 // Testing the connection
 (async () => {
