@@ -21,10 +21,10 @@ router.post("/signup", async (req, res) => {
 
         req.session.user = {
             user_id: newUser.user_id,
-            first_name: newUser.first_name,
-            last_name: newUser.last_name,
+            firstName: newUser.first_name,
+            lastName: newUser.last_name,
             email: newUser.email,
-            gender: "neutral"
+            gender: user.gender || "neutral"
         };
 
         res.redirect("/");
@@ -53,10 +53,10 @@ router.post("/login", async (req, res) => {
 
         req.session.user = {
             user_id: user.user_id,
-            first_name: user.first_name,
-            last_name: user.last_name,
+            firstName: user.first_name,
+            lastName: user.last_name,
             email: user.email,
-            gender: "neutral"
+            gender: user.gender || "neutral"
         };
 
         res.redirect("/");
