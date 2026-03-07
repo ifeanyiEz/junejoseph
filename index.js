@@ -3,10 +3,14 @@ import methodOverride from "method-override";
 import session from "express-session";
 import dashboardRoutes from "./src/routes/dashboard.routes.js";
 import authRoutes from "./src/routes/auth.routes.js";
+import pgSession from "connect-pg-simple";
+import db from "./src/db/index.js";
 
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
+
+const PostgresStore = pgSession(session);
 
 const loginData = [];
 const thisLogin = {};
@@ -21,10 +25,15 @@ app.use(methodOverride("_method"));
 app.use(express.json());
 
 app.use(session({
+    store: new PostgresStore({
+        pool: db,               
+        tableName: 'session'
+    }),
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
+        maxAge: 30 * 24 * 60 * 60 * 1000,
         httpOnly: true,
         secure: false
     }
@@ -95,6 +104,6 @@ app.route("/focus")
         res.render("focus.ejs");
     });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Your blog server is running on port ${port}.`);
 });
