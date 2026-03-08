@@ -2,6 +2,7 @@ import express from "express";
 import methodOverride from "method-override";
 import session from "express-session";
 import dashboardRoutes from "./src/routes/dashboard.routes.js";
+import { requireAuth } from "./src/middleware/auth.middleware.js";
 import authRoutes from "./src/routes/auth.routes.js";
 import pgSession from "connect-pg-simple";
 import db from "./src/db/index.js";
@@ -12,8 +13,6 @@ const port = process.env.PORT || 5000;
 
 const PostgresStore = pgSession(session);
 
-const loginData = [];
-const thisLogin = {};
 const userAccounts = [];
 const subCategories = [];
 const categories = [];
@@ -45,6 +44,9 @@ app.use((req, res, next) => {
 });
 
 app.use("/", authRoutes);
+
+app.use("/user-portal", requireAuth);
+
 app.use("/user-portal", dashboardRoutes);
 
 app.route("/")
