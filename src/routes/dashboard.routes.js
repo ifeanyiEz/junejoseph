@@ -5,16 +5,8 @@ import { buildDashboardMessage } from "../services/dashboard.services.js";
 const router = express.Router();
 
 router.get("/dashboard", (req, res) => {
-    // const signedInUser = {
-    //     firstName: req.session.user.first_name,
-    //     gender: req.session.user.gender || "neutral"
-    // };
 
     const signedInUser = req.session.user;
-
-    if(!signedInUser) {
-        return res.redirect("/login");
-    }
     
     const dashboardData = buildDashboardMessage(signedInUser);
     
