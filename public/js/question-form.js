@@ -60,12 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             console.log(`SUCCESS: Listener attached to button: ${id}`);
         } else {
-            // This error will now fire if the element truly isn't in the DOM
             console.error(`ERROR: Button with ID ${id} not found.`);
         }
     });
 
-    // 2. Hide Form on Close Button Click (Close button on the popup)
     closeQuestionButton.addEventListener('click', (e) => {
         e.stopPropagation();
         hideForm();
@@ -75,11 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
     });
 
-    // 3. Form Submission Handling (Remains the same, forces a hide)
     askQuestionForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        // Log data (replace with actual AJAX/fetch request to server)
         const subject = document.getElementById('subject').value;
         const linkedQueston = document.getElementById('linked-to-content').value;
         const linkedContent = document.getElementById('linked-content').value;
@@ -96,29 +92,19 @@ document.addEventListener('DOMContentLoaded', () => {
             Make Public ='${makePublic}'
             `);
 
-        // Phase 1: Show Success Message (500ms duration)
-
-        // Hide the main submit button
         mainQuestionSubmitButton.classList.add('hidden-button');
-
-        // Show the success button
         successQuestionButton.classList.remove('hidden-button');
 
         console.log("Success message shown.");
 
-        // Phase 2: Wait 2500ms, then hide the form and reset state
         setTimeout(() => {
-            // Hide the pop-up (This is the "pop off" action)
             hideForm();
-
-            // Wait longer than the animation duration (0.4s) before resetting the buttons
             setTimeout(() => {
-                // Reset: Hide success, show main button, reset form
                 successQuestionButton.classList.add('hidden-button');
                 mainQuestionSubmitButton.classList.remove('hidden-button');
                 askQuestionForm.reset();
                 console.log("Form reset complete.");
-            }, 500); // 1 second delay to ensure pop-off animation finishes
+            }, 500); 
 
         }, 1500);
     });
