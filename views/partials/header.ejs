@@ -45,33 +45,33 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mb-2 mb-md-0 me-auto">
                             <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/focus">This Blog</a>
+                                <a class="nav-link menu-margin sbold-text small-text" href="/focus">This Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/life">Life Style</a>
+                                <a class="nav-link menu-margin sbold-text" href="/life">Life Style</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/disease">Conditions</a>
+                                <a class="nav-link menu-margin sbold-text" href="/disease">Conditions</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link menu-margin" href="/questions">Info Bank</a>
+                                <a class="nav-link menu-margin sbold-text" href="/questions">Info Bank</a>
                             </li>
                             
                             <% if (locals.user && user.email) { %>
                                 <li class="nav-item">
-                                    <a class="nav-link nav-button-size bg-orange white-text b-button-orange" href="/signout">Sign Out</a>
+                                    <a class="nav-link nav-button-size bg-orange white-text sbold-text b-button-orange" href="/signout">Sign Out</a>
                                 </li>
                             <% } else { %>
                                 <li class="nav-item">
-                                    <a class="nav-link button-green nav-button-size" href="/login">Sign In</a>
+                                    <a class="nav-link button-green sbold-text nav-button-size" href="/login">Sign In</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link button-green nav-button-size bg-dark white-text" href="/signup">Sign Up</a>
+                                    <a class="nav-link button-green nav-button-size bg-dark white-text sbold-text" href="/signup">Sign Up</a>
                                 </li>
                             <% } %>
                            
                             <li class="nav-item hide-s-xl">
-                                <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text bold-text">Subscribe to Newsletter</button>
+                                <button id="sub-button-xs" type="button" class="nav-link button-orange orange-text sbold-text">Subscribe to Newsletter</button>
                             </li>
                         </ul>
                     </div>
