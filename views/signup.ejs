@@ -21,7 +21,12 @@
                         </div>
                         <div class="form-group large-bm">
                             <label for="password" class="form-label green-text vbold-text xtiny-bm">Password</label>
-                            <input type="password" class="form-control regular-text" name="password" id="password" placeholder="Enter your password" required>
+                            <div class="input-group">
+                                <input type="password" class="form-control regular-text" name="password" id="password" placeholder="Enter your password" required>
+                                <span class="input-group-text bg-white" id="togglePassword" style="cursor: pointer;">
+                                    <i class="bi bi-eye" id="eyeIcon"></i>
+                                </span>
+                            </div>
                         </div>
                         <hr class="large-bm">
                         <div class="d-grid login-button">
