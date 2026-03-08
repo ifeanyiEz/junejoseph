@@ -24,7 +24,7 @@ router.post("/signup", async (req, res) => {
             firstName: newUser.first_name,
             lastName: newUser.last_name,
             email: newUser.email,
-            gender: user.gender || "neutral"
+            gender: "neutral"
         };
 
         res.redirect("/");
@@ -56,10 +56,13 @@ router.post("/login", async (req, res) => {
             firstName: user.first_name,
             lastName: user.last_name,
             email: user.email,
-            gender: user.gender || "neutral"
+            gender: "neutral"
         };
 
-        res.redirect("/");
+        req.session.save((err) => {
+            if (err) return next(err);
+            res.redirect("/");
+        })
 
     } catch (error) {
         console.error(error);
