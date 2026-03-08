@@ -39,11 +39,11 @@ html, body {
     padding: 1.45rem;
 }
 
-#user-dropdown {
+#profile-summary {
     position: fixed;
-    top: 45px;
-    right: 2%;
-    width: 10%;
+    top: 35px;
+    right: 1%;
+    width: min-content;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #ffffff;
