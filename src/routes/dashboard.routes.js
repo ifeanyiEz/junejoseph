@@ -11,8 +11,6 @@ router.get("/dashboard", (req, res) => {
     // };
 
     const signedInUser = req.session.user;
-    
-    console.log(`The signed-in user is: ${signedInUser.firstName}`);
 
     if(!signedInUser) {
         return res.redirect("/login");
