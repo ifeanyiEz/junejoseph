@@ -13,11 +13,6 @@ const port = process.env.PORT || 5000;
 
 const PostgresStore = pgSession(session);
 
-const userAccounts = [];
-const subCategories = [];
-const categories = [];
-const allBlogs = [];
-
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
@@ -43,6 +38,11 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use((req, res, next) => {
+    res.set('Cache-Control', 'no-store, no-cache, must-revalidate, private');
+    next();
+});
+
 app.use("/", authRoutes);
 
 app.use("/user-portal", requireAuth);
@@ -53,7 +53,6 @@ app.route("/")
     .get((req, res) => {
     res.render("index.ejs");
 });
-
 
 app.route("/user-portal/articles")
     .get((req, res) => {
