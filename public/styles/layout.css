@@ -31,8 +31,12 @@ html, body {
     position: relative;
 }
 
+#top-banner {
+    height: 45dvh;
+}
+
 #blogs-header {
-    padding: 2rem;
+    padding: 2rem 2rem 1.2rem 2rem;
 }
 
 #portal-header {
@@ -89,6 +93,16 @@ html, body {
     padding-bottom: 5.8rem;
 }
 
+.blog-container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
 #portal-body {
     width: 100%;
     padding-bottom: 45px;
@@ -97,7 +111,7 @@ html, body {
 #better-way .home-cols {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: 5fr 2.2fr;
+    grid-template-columns: 5fr 2.5fr;
     grid-template-rows: auto;
 }
 
@@ -240,6 +254,10 @@ html, body {
         --bs-gutter-x: 3rem !important;
     }
 
+    .blog-container {
+        --bs-gutter-x: 3.2rem !important;
+    }
+
     html,
     body {
         font-size: 13px;
@@ -260,6 +278,14 @@ html, body {
 
     #blog-body {
         padding-bottom: var(--body-padding-bottom);
+    }
+
+    #top-banner {
+        height: 25dvh;
+    }
+
+    #banner-title {
+        font-size: 1.8rem;
     }
 
     #blogs-footer {
@@ -382,6 +408,10 @@ html, body {
         max-width: 95%;
     }
 
+    .blog-container {
+        max-width: 85%;
+    }
+
     html,
     body {
         font-size: 13.25px;
@@ -393,6 +423,14 @@ html, body {
 
     #blog-body {
         padding-bottom: var(--body-padding-bottom);
+    }
+
+    #top-banner {
+        height: 30dvh;
+    }
+
+    #banner-title {
+        font-size: 2.5rem;
     }
 
     #portal-header {
@@ -521,6 +559,10 @@ html, body {
         max-width: 92%;
     }
 
+    .blog-container {
+        max-width: 82%;
+    }
+
     html,
     body {
         font-size: 13.5px;
@@ -532,6 +574,14 @@ html, body {
 
     #blog-body {
         padding-bottom: var(--body-padding-bottom);
+    }
+
+    #top-banner {
+        height: 35dvh;
+    }
+
+    #banner-title {
+        font-size: 2.8rem;
     }
 
     #portal-header {
@@ -660,6 +710,10 @@ html, body {
         max-width: 92%;
     }
 
+    .blog-container {
+        max-width: 82%;
+    }
+
     html,
     body {
         font-size: 13.75px;
@@ -671,6 +725,14 @@ html, body {
 
     #blog-body {
         padding-bottom: var(--body-padding-bottom);
+    }
+
+    #top-banner {
+        height: 40dvh;
+    }
+
+    #banner-title {
+        font-size: 3.5rem;
     }
 
     #portal-header {
@@ -767,6 +829,10 @@ html, body {
     .container-xl,
     .container-xxl {
         max-width: 92%;
+    }
+
+    .blog-container {
+        max-width: 82%;
     }
 
     html,
@@ -895,6 +961,10 @@ html, body {
         max-width: 92%;
     }
 
+    .blog-container {
+        max-width: 82%;
+    }
+
     html,
     body {
         font-size: 14.5px;
@@ -993,6 +1063,10 @@ html, body {
         max-width: 92%;
     }
 
+    .blog-container {
+        max-width: 82%;
+    }
+
     html,
     body {
         font-size: 15px;
@@ -1066,6 +1140,10 @@ html, body {
         max-width: 90%;
     }
 
+    .blog-container {
+        max-width: 80%;
+    }
+
     html,
     body {
         font-size: 15.5px;
@@ -1137,6 +1215,10 @@ html, body {
     .container-xl,
     .container-xxl {
         max-width: 85%;
+    }
+
+    .blog-container {
+        max-width: 75%;
     }
 
     html,
