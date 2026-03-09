@@ -167,6 +167,22 @@
     background-position: right center;
 }
 
+.banner-bg {
+    background-image: url("/images/better_way2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#banner-title {
+    font-size: 4.5rem;
+}
+
+.top-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .grid-cell {
     background-color: #f8f5fe;
     opacity: 0.98;
@@ -436,7 +452,7 @@
 
 .bg-orange {
     --bs-bg-opacity: 1;
-    background-color: #f83c03 !important;
+    background-color: #f86503 !important;
 }
 
 .bg-dark {
