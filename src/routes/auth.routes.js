@@ -24,6 +24,9 @@ router.post("/signup", async (req, res) => {
             firstName: newUser.first_name,
             lastName: newUser.last_name,
             email: newUser.email,
+            role: 'user', 
+            permissions: ["read:article", "read:conversation", "create:question", "create:comment", "read:portal"],
+            constraints: {"max_questions_per_day": 5, "edit_window_mins": 15},
             gender: "neutral"
         };
 
@@ -56,6 +59,9 @@ router.post("/login", async (req, res) => {
             firstName: user.first_name,
             lastName: user.last_name,
             email: user.email,
+            role: user.role,
+            permissions: user.permissions,
+            constraints: user.constraints,
             gender: "neutral"
         };
 
