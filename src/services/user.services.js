@@ -8,11 +8,14 @@ import { getUserByEmail } from '../models/user.models.js';
 export async function registerUser(userData) {
     const user_id = slugGen(userData.email);
     const hashedPassword = await hashPassword(userData.password);
+
+    const defaultRoleId = 1001;
     
     return createUser({
         ...userData,
         user_id,
-        password: hashedPassword
+        password: hashedPassword,
+        role_id: defaultRoleId
     });
 }
 
@@ -33,6 +36,9 @@ export async function loginUser(email, password) {
         user_id: user.user_id,
         first_name: user.first_name,
         last_name: user.last_name,
-        email: user.email
+        email: user.email,
+        role: user.role_name,
+        permissions: user.permissions,
+        constraints: user.constraints
     };
 }
