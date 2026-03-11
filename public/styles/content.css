@@ -426,8 +426,15 @@
     padding: 0.15rem 0.5rem;
 }
 
+.ns-small-text {
+    font-size: 0.85rem;
+    margin: 0;
+    padding: 0;
+}
+
 .smaller-text {
     font-size: 0.75rem;
+    line-height: 1;
     margin: 0;
     padding: 0;
 }
@@ -521,9 +528,27 @@ ul .nav-item {
 
 /* USER PORTAL */
 
+#userDropdown {
+    display: inline-flex;
+    align-items: center;
+}
+
 .top-icon {
     font-size: 1rem;
-    margin-right: 0.2rem;
+    margin-right: 0.1rem;
+}
+
+.profile-icon {
+    margin-right: 0.1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    vertical-align: middle;
+}
+
+.user-avatar {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #008c8c;
 }
 
 .side-icon {
