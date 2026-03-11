@@ -22,8 +22,7 @@
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
-        crossorigin="anonymous"></script>
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/bootstrap.min.css">
@@ -79,8 +78,8 @@
                             </div>
                             <div id="profile-info">
                                 <p id="user-name" class="no-bm vbold-text"><%= user.firstName %> <%= user.lastName %></p>
-                                <p id="user-email" class="no-bm sbold-text"><%= user.email %></p>
-                                <p id="user-role" class="no-bm sbold-text">Role: User</p>
+                                <p id="user-email" class="no-bm regular-text"><%= user.email %></p>
+                                <p id="user-role" class="no-bm regular-text">Role: Registered <%= user.role %></p>
                                 <p id="profile-view" class="no-bm bold-text"></p>
                             </div>
                             <div class="d-grid">
@@ -91,6 +90,105 @@
                             </div>
                         </div>
                     </div>
+
+                    <section id="blogPost-form" class="large-bm">
+                        <div class="right-text">
+                            <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
+                        </div>
+                        <div class="mainPost-form">
+                            <h4 class="green-text vbold-text centered-text large-bm">Edit your profile</h4>
+                            <hr class="large-bm">
+                            <form id="create-post" class="form-body" action="" method="POST">
+                                <div class="main-post">
+                                    <div class="form-section">
+                                        <div id="firstName" class="form-group vtiny-bm">
+                                            <label for="first-name" class="form-label green-text vbold-text xtiny-bm">First Name</label>
+                                            <input type="text" class="form-control bold-text" name="first-name" id="first-name" value="<%= user.firstName %>" required disabled>
+                                        </div>
+                                        <div id="lastName" class="form-group vtiny-bm">
+                                            <label for="last-name" class="form-label green-text vbold-text xtiny-bm">Last Name</label>
+                                            <input type="text" class="form-control bold-text" name="last-name" id="last-name" value="<%= user.lastName %>" required disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                        <div id="profileEmail" class="form-group vtiny-bm">
+                                            <label for="profile-email" class="form-label green-text vbold-text xtiny-bm">Email Address</label>
+                                            <input type="text" class="form-control bold-text" name="profile-email" id="profile-email" value="<%= user.email %>" required disabled>
+                                        </div>
+                                        <div id="profileGender" class="form-group vtiny-bm">
+                                            <label for="gender" class="form-label green-text vbold-text xtiny-bm">Gender</label>
+                                            <select name="gender" id="gender" class="form-select regular-text" required autofocus>
+                                                <option value="">How do you identify?</option>
+                                                <option value="female">Female</option>
+                                                <option value="male">Male</option>
+                                                <option value="neutral">Others</option>
+                                            </select>
+                                            <p class="smaller-text no-padding xtiny-tbm bold-text">This is important, some health conditions can be gender-specific.</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-section">
+                                        <div id="birthDate" class="form-group vtiny-bm">
+                                            <label for="birth-date" class="form-label green-text vbold-text xtiny-bm">Date of Birth</label>
+                                            <input type="date" class="form-control regular-text" name="birth-date" id="birth-date" value="" placeholder="Your date of birth">
+                                        </div>
+                                        <div id="phoneNumber" class="form-group vtiny-bm">
+                                            <label for="phone-number" class="form-label green-text vbold-text xtiny-bm">Phone Number</label>
+                                            <input type="text" class="form-control regular-text" name="phone-number" id="phone-number" value="" placeholder="Your most relaible phone number">
+                                        </div>
+                                    </div>
+                                    <div id="profileBio" class="form-group vtiny-bm">
+                                        <label for="profile-bio" class="form-label green-text vbold-text xtiny-bm">Brief Bio</label>
+                                        <textarea class="form-control" name="profile-bio" id="profile-bio" placeholder="Just a little bit about you"></textarea>
+                                    </div>
+
+                                    <% if (locals.user && user.permissions.includes("create:article")) { %>
+                                        <hr class="large-bm">
+                                        <div class="form-section">
+                                            <div id="professionalTitle" class="form-group vtiny-bm">
+                                                <label for="professional_title" class="form-label green-text vbold-text xtiny-bm">Professional Title</label>
+                                                <input type="text" class="form-control" name="professional_title" id="professional_title" placeholder="How should you be addressed?" required>
+                                            </div>
+                                            <div id="specialization" class="form-group vtiny-bm">
+                                                <label for="specialization_level" class="form-label green-text vbold-text xtiny-bm"> Specialization</label>
+                                                <input type="text" class="form-control" name="specialization_level" id="specialization_level" placeholder="Level of specialization in your field." required>
+                                            </div>
+                                        </div>
+                                        <div class="form-section">
+                                            <div id="expertise" class="form-group vtiny-bm">
+                                                <label for="field_of_expertise" class="form-label green-text vbold-text xtiny-bm">Field of Expertise</label>
+                                                <input type="text" class="form-control" name="field_of_expertise" id="field_of_expertise" placeholder="Your field of expertise">
+                                            </div>
+                                            <div id="yearsExperience" class="form-group vtiny-bm">
+                                                <label for="years_of_experience" class="form-label green-text vbold-text xtiny-bm"> Writer's Experience</label>
+                                                <input type="text" class="form-control" name="years_of_experience" id="years_of_experience" placeholder="Length of practice in years">
+                                            </div>
+                                        </div>
+
+                                    <% } %>
+                                    <hr class="large-bm">
+                                    <div id="blogForm-actions" class="form-buttons tiny-bm">
+                                        <div id="blogForm-left" class="actions-left">
+                                            <button type="reset" id="cancel-post" class="action-block-cancel no-border">
+                                                <!-- <i class="bi bi-x-circle action-icon-new"></i> -->
+                                                <p class="action-name bold-text white-text no-padding">Cancel</p>
+                                            </button>
+                                        </div>
+                                        <div id="blogForm-right" class="actions-right">
+                                            <button type="submit" id="publish" class="action-block-publish no-border">
+                                                <!-- <i class="bi bi-send action-icon-new"></i> -->
+                                                <p class="action-name bold-text no-padding white-text">Publish</p>
+                                            </button>
+                                            <button type="submit" id="save-draft" class="action-block-draft ">
+                                                <!-- <i class="bi bi-save action-icon-draft"></i> -->
+                                                <p class="action-name bold-text no-padding green-text">Save as Draft</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+
                 </div>
             </nav>
         </div>
