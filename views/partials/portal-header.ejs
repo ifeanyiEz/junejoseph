@@ -46,24 +46,36 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mb-md-0 me-auto">
                             <li class="nav-item">
-                                <a class="nav-link sbold-text" href="/user-portal/questions"><i class="bi bi-bell top-icon"></i><span class=" hide-sm"> Questions</span>
+                                <a class="nav-link sbold-text" href="/user-portal/my-questions"><i class="bi bi-question-diamond top-icon"></i><span class=" hide-sm">My Questions</span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link sbold-text" href="/user-portal/subscriptions"><i class="bi bi-envelope top-icon"></i><span class="hide-sm"> Subscriptions</span>
-                                </a>
-                            </li> 
-                            <li class="nav-item">
-                                <a class="nav-link sbold-text" href="/user-portal/users"><i class="bi bi-people top-icon"></i><span class="hide-sm"> Accounts</span>
-                                </a>
-                            </li> 
-                            <li class="nav-item">
-                                <a class="nav-link sbold-text" href="/user-portal/settings"> <i class="bi bi-gear-fill top-icon" style="color: #008c8c;"></i><span class="hide-sm"> Settings</span>
+                                <a class="nav-link sbold-text" href="/user-portal/my-tickets"><i class="bi bi-bell top-icon"></i><span class=" hide-sm">My Tickets</span>
                                 </a>
                             </li>
-                             <li class="nav-item">
+                            <% if (locals.user && user.permissions.includes("create:article")) { %>
+                                <li class="nav-item">
+                                    <a class="nav-link sbold-text" href="/user-portal/questions"><i class="bi bi-question-circle top-icon"></i><span class=" hide-sm">All Questions</span>
+                                    </a>
+                                </li>
+                            <% } %>
+                            <% if (locals.user && user.permissions.includes("update:user_role")) { %>
+                                <li class="nav-item">
+                                    <a class="nav-link sbold-text" href="/user-portal/subscriptions"><i class="bi bi-envelope top-icon"></i><span class="hide-sm"> Subscriptions</span>
+                                    </a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a class="nav-link sbold-text" href="/user-portal/users"><i class="bi bi-people top-icon"></i><span class="hide-sm"> Accounts</span>
+                                    </a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a class="nav-link sbold-text" href="/user-portal/settings"> <i class="bi bi-gear-fill top-icon" style="color: #008c8c;"></i><span class="hide-sm"> Settings</span>
+                                    </a>
+                                </li>
+                            <% } %>
+                            <li class="nav-item">
                                 <a id="userDropdown" class="nav-link sbold-text" href="#profile-summary">
-                                   <i class="bi bi-person-square top-icon" style="color: #008c8c;"></i><span class="hide-sm"> <%= user.firstName %></span>
+                                   <img src="/images/ifunanya.jpg" alt="User Profile" class="profile-icon user-avatar"><span class="hide-sm"> <%= user.firstName %></span>
                                 </a>
                             </li>
                         </ul>
@@ -76,22 +88,29 @@
                             <div id="profileImg">
                                 <img class="profile_img" src="/images/ifunanya.jpg" alt="<%=user.firstName %>'s image">
                             </div>
-                            <div id="profile-info">
+                            <div>
                                 <p id="user-name" class="no-bm vbold-text"><%= user.firstName %> <%= user.lastName %></p>
-                                <p id="user-email" class="no-bm regular-text"><%= user.email %></p>
-                                <p id="user-role" class="no-bm regular-text">Role: Registered <%= user.role %></p>
+                                <p id="user-email" class="no-bm regular-text smaller-text"><%= user.email %></p>
+                            </div>
+                            <hr class="no-bm">
+                            <div id="profile-info" class="profile-dropdown">
+                                <a class="nav-link regular-text" href="/user-portal/my-questions"><span class=" hide-sm">My Questions</span>
+                                </a>
+                                <a class="nav-link regular-text" href="/user-portal/my-tickets"><span class=" hide-sm">My Support Tickets</span>
+                                </a>
                                 <p id="profile-view" class="no-bm bold-text"></p>
                             </div>
-                            <div class="d-grid">
-                                <button id="edit-profile" type="button" class="nav-link button-green green-text small-text sbold-text">Edit Profile</button>
-                            </div>
-                            <div class="d-grid">
+                            <hr class="no-bm">
+                            <p id="user-role" class="no-bm regular-text">Role: Registered <%= user.role %></p>
+                            <hr class="no-bm">
+                            <div class="d-grid vtiny-tbm">
+                                <button id="edit-profile" type="button" class="nav-link button-green green-text small-text sbold-text vtiny-bm">Edit Profile</button>
                                 <a id="portal-signout" class="nav-link button-orange bg-orange white-text small-text sbold-text" href="/signout">Sign Out</a>
                             </div>
                         </div>
                     </div>
 
-                    <section id="blogPost-form" class="large-bm">
+                    <section id="blogPost-form" class="large-bm hidden-form">
                         <div class="right-text">
                             <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
                         </div>
