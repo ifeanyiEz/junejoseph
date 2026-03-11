@@ -2,7 +2,6 @@
 .DS_Store
 package-lock.json
 backup.sql
-session_table.sql
 
 # Logs
 logs
