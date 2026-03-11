@@ -1,10 +1,11 @@
 import express from "express";
 import { dashboardMessages } from "../config/dash_messages.config.js";
 import { buildDashboardMessage } from "../services/dashboard.services.js";
+import { requirePermission } from "../middleware/permission.middleware.js";
 
 const router = express.Router();
 
-router.get("/dashboard", (req, res) => {
+router.get("/dashboard", requirePermission("read:portal"), (req, res) => {
 
     const signedInUser = req.session.user;
     
