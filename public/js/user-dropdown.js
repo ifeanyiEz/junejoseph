@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropdownTrigger = document.getElementById("userDropdown");
     const userProfileSummary = document.getElementById("profile-summary");
     const closeDropdown = document.getElementById("close-dropdown");
-    const editProfileButton = document.getElementById("edit-profile");
 
     function showProfileSummary() {
         userProfileSummary.classList.remove('hidden-form');
