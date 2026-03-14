@@ -427,13 +427,13 @@
 }
 
 .ns-small-text {
-    font-size: 0.85rem;
+    font-size: 0.85rem !important;
     margin: 0;
     padding: 0;
 }
 
 .smaller-text {
-    font-size: 0.75rem;
+    font-size: 0.75rem !important;
     line-height: 1;
     margin: 0;
     padding: 0;
@@ -543,6 +543,21 @@ ul .nav-item {
     width: 1.2rem;
     height: 1.2rem;
     vertical-align: middle;
+}
+
+.profile-image {
+    max-width: 200px; 
+    border-radius: 50%;
+    border: 1px solid #008c8c;
+    object-fit: cover; 
+    aspect-ratio: 1/1;
+}
+
+#image-area {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    place-items: center;
 }
 
 .user-avatar {
