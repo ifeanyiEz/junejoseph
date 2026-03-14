@@ -75,7 +75,7 @@
                             <% } %>
                             <li class="nav-item">
                                 <a id="userDropdown" class="nav-link sbold-text" href="#profile-summary">
-                                   <img src="/images/ifunanya.jpg" alt="User Profile" class="profile-icon user-avatar"><span class="hide-sm"> <%= user.firstName %></span>
+                                   <img src="/images/default-avatar.png" alt="User Profile" class="profile-icon user-avatar"><span class="hide-sm"> <%= user.firstName %></span>
                                 </a>
                             </li>
                         </ul>
@@ -86,7 +86,7 @@
                                 <button id="close-dropdown" type="button" class="button-orange red-text small-text bold-text">Close</button>
                             </div>
                             <div id="profileImg">
-                                <img class="profile_img" src="/images/ifunanya.jpg" alt="<%=user.firstName %>'s image">
+                                <img class="profile_img" src="/images/default-avatar.png" alt="<%=user.firstName %>'s image">
                             </div>
                             <div>
                                 <p id="user-name" class="no-bm vbold-text"><%= user.firstName %> <%= user.lastName %></p>
@@ -109,16 +109,26 @@
                             </div>
                         </div>
                     </div>
-
-                    <section id="blogPost-form" class="large-bm hidden-form">
+                    <section id="profileEdit-form" class="large-bm hidden-form">
                         <div class="right-text">
-                            <button id="close-post" type="button" class="button-orange red-text small-text bold-text">Close</button>
+                            <button id="close-profileEdit" type="button" class="button-orange red-text small-text bold-text">Close</button>
                         </div>
                         <div class="mainPost-form">
                             <h4 class="green-text vbold-text centered-text large-bm">Edit your profile</h4>
                             <hr class="large-bm">
-                            <form id="create-post" class="form-body" action="" method="POST">
+                            <form id="create-post" class="form-body" action="/user-portal/profile/update" method="POST" enctype="multipart/form-data">
                                 <div class="main-post">
+                                    <div id="image-area">
+                                        <div id="display-picture" class="xtiny-bm">
+                                            <img id="profile-preview" 
+                                                src="<%= user.profile_picture ? user.profile_picture : '/images/default-avatar.png' %>" 
+                                                alt="Profile Picture" 
+                                                class="profile-image">
+                                        </div>
+                                        <div id="upload-picture" class="form-group tiny-bm">
+                                            <input type="file" class="form-control small-text sbold-text" name="profile_image" id="profile_image" accept=".jpg, .jpeg, .png">
+                                        </div>
+                                    </div>
                                     <div class="form-section">
                                         <div id="firstName" class="form-group vtiny-bm">
                                             <label for="first-name" class="form-label green-text vbold-text xtiny-bm">First Name</label>
@@ -182,32 +192,18 @@
                                                 <input type="text" class="form-control" name="years_of_experience" id="years_of_experience" placeholder="Length of practice in years">
                                             </div>
                                         </div>
-
                                     <% } %>
                                     <hr class="large-bm">
-                                    <div id="blogForm-actions" class="form-buttons tiny-bm">
-                                        <div id="blogForm-left" class="actions-left">
-                                            <button type="reset" id="cancel-post" class="action-block-cancel no-border">
-                                                <!-- <i class="bi bi-x-circle action-icon-new"></i> -->
-                                                <p class="action-name bold-text white-text no-padding">Cancel</p>
-                                            </button>
-                                        </div>
+                                    <div id="blogForm-actions" class="tiny-bm">
                                         <div id="blogForm-right" class="actions-right">
-                                            <button type="submit" id="publish" class="action-block-publish no-border">
-                                                <!-- <i class="bi bi-send action-icon-new"></i> -->
-                                                <p class="action-name bold-text no-padding white-text">Publish</p>
-                                            </button>
-                                            <button type="submit" id="save-draft" class="action-block-draft ">
-                                                <!-- <i class="bi bi-save action-icon-draft"></i> -->
-                                                <p class="action-name bold-text no-padding green-text">Save as Draft</p>
-                                            </button>
+                                            <button type="submit" id="save-profile" class="button-green bg-dark bold-text white-text no-border">Save Profile</button>
+                                            <button type="reset" id="cancel-edit" class="button-orange sbold-text orange-text">Cancel</button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </section>
-
                 </div>
             </nav>
         </div>
